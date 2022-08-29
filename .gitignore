@@ -1,0 +1,6 @@
+dist/
+bin/
+target/
+.project
+.settings/
+.classpath

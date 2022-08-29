@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_FILE" value="walletManagerClient.log"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{M-d HH:mm:ss.SSS} %5level[%thread]%c{0}:%L %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{M-d HH:mm:ss.SSS} %5level[%thread]%c{0}:%L %msg%n</pattern>
+		</encoder>
+		<file>${LOG_FILE}</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILE}.%d{yyyyMMdd}.gz</fileNamePattern>
+            <maxHistory>90</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ROLLING-FILE"/>
+    </root>
+	
+	<logger name="org.springframework" level="WARN" />
+	<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="WARN" />
+	<logger name="dev.m18" level="DEBUG" />
+</configuration>
