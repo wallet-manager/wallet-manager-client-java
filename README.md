@@ -1,6 +1,6 @@
 
 
-#Utilities
+# Utilities and Client
 
 ## Initialise WalletManagerUtils
 
@@ -133,63 +133,63 @@ WalletManagerApi api = client.getApi();
 ```
 
 ```
-	/**
-	 * Get client deposit address by clientId
-	 * @param request
-	 * @return
-	 */
-	Response<GetAddressResult> getAddress(GetAddressRequest request);
-	
-	/**
-	 * Send a batch withdraw request.
-	 * @param request
-	 * @return
-	 */
-	Response<BatchWithdrawResult> batchWithdraw(BatchWithdrawRequest request);
-	
-	/**
-	 * Send a batch sweep request.
-	 * @param request
-	 * @return
-	 */
-	Response<BatchSweepResult> batchSweep(BatchSweepRequest request);
-	
-	/**
-	 * Get deposit by address.
-	 * `/${chain_type}/${chain_id}/transfer/addr/${address}/deposit/${asset_name}`
-	 * @return
-	 */
-	Response<GetDepositByAddressResult> getDepositByAddress(
-			Integer chainType,
-			Long chainId,
-			String address,
-			String assetName,
-			Integer offset,
-			Integer limit);
-	
-	/**
-	 * Get deposit by address.
-	 * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
-	 * @return
-	 */
-	Response<GetDepositByHashResult> getDepositByHash(
-			Integer chainType,
-			Long chainId,
-			String txHash);
-	
-	/**
-	 * Get withdraw by merchant order id
-	 * `/withdraw/order/${merchant_order_id}`
-	 * @return
-	 */
-	Response<Operation> getWithdrawByOrderId(String merchantOrderId);
-	
-	/**
-	 * Get withdraw by operation batch ID returned in {@link #batchWithdraw(BatchWithdrawRequest)}
-	 * `/withdraw/batch/${batch_id}`
-	 * @return
-	 */
-	Response<OperationBatch> getWithdrawByBatchId(Long batchId);
+/**
+ * Get client deposit address by clientId
+ * @param request
+ * @return
+ */
+Response<GetAddressResult> getAddress(GetAddressRequest request);
+
+/**
+ * Send a batch withdraw request.
+ * @param request
+ * @return
+ */
+Response<BatchWithdrawResult> batchWithdraw(BatchWithdrawRequest request);
+
+/**
+ * Send a batch sweep request.
+ * @param request
+ * @return
+ */
+Response<BatchSweepResult> batchSweep(BatchSweepRequest request);
+
+/**
+ * Get deposit by address.
+ * `/${chain_type}/${chain_id}/transfer/addr/${address}/deposit/${asset_name}`
+ * @return
+ */
+Response<GetDepositByAddressResult> getDepositByAddress(
+		Integer chainType,
+		Long chainId,
+		String address,
+		String assetName,
+		Integer offset,
+		Integer limit);
+
+/**
+ * Get deposit by address.
+ * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
+ * @return
+ */
+Response<GetDepositByHashResult> getDepositByHash(
+		Integer chainType,
+		Long chainId,
+		String txHash);
+
+/**
+ * Get withdraw by merchant order id
+ * `/withdraw/order/${merchant_order_id}`
+ * @return
+ */
+Response<Operation> getWithdrawByOrderId(String merchantOrderId);
+
+/**
+ * Get withdraw by operation batch ID returned in {@link #batchWithdraw(BatchWithdrawRequest)}
+ * `/withdraw/batch/${batch_id}`
+ * @return
+ */
+Response<OperationBatch> getWithdrawByBatchId(Long batchId);
 ```
 
 
