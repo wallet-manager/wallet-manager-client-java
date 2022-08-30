@@ -3,6 +3,7 @@ package dev.m18.walletmanager.client.api;
 import dev.m18.walletmanager.client.WalletManagerConstants;
 import dev.m18.walletmanager.client.entities.Header;
 import dev.m18.walletmanager.client.utils.WalletManagerUtils;
+import feign.Request.HttpMethod;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 
@@ -17,7 +18,11 @@ public class WalletManagerApiInterceptor implements RequestInterceptor {
 	@Override
 	public void apply(RequestTemplate template) {
 
-		String body = template.requestBody().asString();
+		String body = "";
+		
+		if(template.method().equals(HttpMethod.GET.name())) {
+			template.requestBody().asString();	
+		}
 
 		// sign content
 		Header header = utils.sign(body);

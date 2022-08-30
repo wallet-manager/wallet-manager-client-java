@@ -5,7 +5,8 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class GetDepositByAddressResult {
+public class GetDepositByHashResult {
 
-	List<TransferTransaction> transactions;	
+	List<TransferTransaction> transactions;
+	
 }

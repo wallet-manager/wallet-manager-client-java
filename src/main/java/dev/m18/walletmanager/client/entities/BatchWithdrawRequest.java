@@ -30,7 +30,7 @@ public class BatchWithdrawRequest {
 	
 	
 	@Data
-	public class WithdrawOrder{
+	static public class WithdrawOrder{
 		
 		@JsonProperty("merchant_order_id")
 	    String merchantOrderId;

@@ -1,710 +1,125 @@
-8-29 10:19:41.617  WARN[main]xxx:11 xxx
-8-29 10:20:43.049  WARN[main]xxx:11 xxx
-8-29 10:21:13.136  WARN[main]xxx:11 xxx
-8-29 10:25:00.969  WARN[main]xxx:11 xxx
-8-29 10:26:12.188  INFO[main]xxx:11 xxx
-8-29 10:26:42.392  INFO[main]WalletManagerClient:11 xxx
-8-29 10:27:48.371  INFO[main]WalletManagerClient:11 xxx
-8-29 10:27:53.820  INFO[main]WalletManagerClient:11 xxx
-8-29 10:28:08.774  INFO[main]WalletManagerClient:11 xxx
-8-29 10:28:20.820  INFO[main]WalletManagerClient:11 xxx
-8-29 10:30:10.324  INFO[main]WalletManagerClient:11 xxx
-8-29 10:39:59.573 ERROR[main]WalletManagerClient:11 No avalidable server in {}
-8-29 13:42:10.055 ERROR[main]WalletManagerUtils:101 Verify signature failed.
-java.lang.ArrayIndexOutOfBoundsException: arraycopy: last destination index 64 out of bounds for byte[32]
-	at java.base/java.lang.System.arraycopy(Native Method)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.signature(WalletManagerUtils.java:169)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.verify(WalletManagerUtils.java:85)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.main(WalletManagerUtils.java:194)
-8-29 13:43:45.734 ERROR[main]WalletManagerUtils:101 Verify signature failed.
-java.lang.ArrayIndexOutOfBoundsException: arraycopy: last destination index 64 out of bounds for byte[32]
-	at java.base/java.lang.System.arraycopy(Native Method)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.signature(WalletManagerUtils.java:169)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.verify(WalletManagerUtils.java:85)
-	at dev.m18.walletmanager.client.utils.WalletManagerUtils.main(WalletManagerUtils.java:194)
-8-29 13:59:31.395 DEBUG[main]WalletManagerUtils:72 Sign message hash 437ba43c0759f5852e5ae9af24e30c404cf2e317310e35e68064b9ff64ccf54c
-8-29 13:59:31.398 DEBUG[main]WalletManagerUtils:73 Signagure V 1b
-8-29 13:59:31.398 DEBUG[main]WalletManagerUtils:74 Signature R 270bbc0896b221972f37237b052ee2f662cba5959cb6da294357fd8af764cdcf
-8-29 13:59:31.398 DEBUG[main]WalletManagerUtils:75 Signature S 65cb01f92e235b6d09163d12884aeda71526ce9985976a153e7a7fd1eb9375a8
-8-29 13:59:31.399 DEBUG[main]WalletManagerUtils:92 Sign message hash 437ba43c0759f5852e5ae9af24e30c404cf2e317310e35e68064b9ff64ccf54c
-8-29 13:59:31.399 DEBUG[main]WalletManagerUtils:93 Signagure V 1b
-8-29 13:59:31.399 DEBUG[main]WalletManagerUtils:94 Signature R 270bbc0896b221972f37237b052ee2f662cba5959cb6da294357fd8af764cdcf
-8-29 13:59:31.399 DEBUG[main]WalletManagerUtils:95 Signature S 65cb01f92e235b6d09163d12884aeda71526ce9985976a153e7a7fd1eb9375a8
-8-29 14:01:04.338 DEBUG[main]WalletManagerUtils:197 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 14:01:04.340 DEBUG[main]WalletManagerUtils:198 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 14:01:04.342 DEBUG[main]WalletManagerUtils:199 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 14:01:04.364 DEBUG[main]WalletManagerUtils:72 Sign message hash c89cfa89da9d78f1e7d513db5a78af170f64edd6b1c876cff4027987941478be
-8-29 14:01:04.365 DEBUG[main]WalletManagerUtils:73 Signagure V 1b
-8-29 14:01:04.365 DEBUG[main]WalletManagerUtils:74 Signature R 7acc7a381d4d8ed899debeef07f9b96791aab615598a0d7d5b2540b1f4fce49d
-8-29 14:01:04.365 DEBUG[main]WalletManagerUtils:75 Signature S 18b11d24e3eb0305f0684e0edb6e659fdd8ac3fdb0963a3f324e0cd95a911b18
-8-29 14:01:04.365 DEBUG[main]WalletManagerUtils:203 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661752864342, session=1013689724524564480, sequence=1, signature=7acc7a381d4d8ed899debeef07f9b96791aab615598a0d7d5b2540b1f4fce49d18b11d24e3eb0305f0684e0edb6e659fdd8ac3fdb0963a3f324e0cd95a911b181b)
-8-29 14:01:04.365 DEBUG[main]WalletManagerUtils:92 Verfiy message hash c89cfa89da9d78f1e7d513db5a78af170f64edd6b1c876cff4027987941478be
-8-29 14:01:04.366 DEBUG[main]WalletManagerUtils:93 Signagure V 1b
-8-29 14:01:04.366 DEBUG[main]WalletManagerUtils:94 Signature R 7acc7a381d4d8ed899debeef07f9b96791aab615598a0d7d5b2540b1f4fce49d
-8-29 14:01:04.366 DEBUG[main]WalletManagerUtils:95 Signature S 18b11d24e3eb0305f0684e0edb6e659fdd8ac3fdb0963a3f324e0cd95a911b18
-8-29 14:01:04.385 DEBUG[main]WalletManagerUtils:207 Result Verified
-8-29 14:11:43.047 DEBUG[main]WalletManagerUtils:199 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 14:11:43.049 DEBUG[main]WalletManagerUtils:200 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 14:11:43.049 DEBUG[main]WalletManagerUtils:201 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 14:11:43.103 DEBUG[main]WalletManagerUtils:72 Sign message content 1661753503049#1013692403481055232#2#abc
-8-29 14:11:43.105 DEBUG[main]WalletManagerUtils:73 Sign message hash 0a32849262e6ad9038621a3bcb1cde2f129a0bae975e4ec632764cd274898a1b
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:75 Signature R d427614135f77a6e9c23e4bc4c04490f04ba1f9db2e1d0878a3f2f37396a7806
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:76 Signature S 41fb907414a014a4a8481ca5382bb3d20958cd785d98a6a09954b7ebc15c2b56
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:205 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661753503049, session=1013692403481055232, sequence=1, signature=d427614135f77a6e9c23e4bc4c04490f04ba1f9db2e1d0878a3f2f37396a780641fb907414a014a4a8481ca5382bb3d20958cd785d98a6a09954b7ebc15c2b561c)
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:93 Sign message content 1661753503049#1013692403481055232#2#abc
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:94 Verfiy message hash 0a32849262e6ad9038621a3bcb1cde2f129a0bae975e4ec632764cd274898a1b
-8-29 14:11:43.106 DEBUG[main]WalletManagerUtils:95 Signagure V 1c
-8-29 14:11:43.107 DEBUG[main]WalletManagerUtils:96 Signature R d427614135f77a6e9c23e4bc4c04490f04ba1f9db2e1d0878a3f2f37396a7806
-8-29 14:11:43.107 DEBUG[main]WalletManagerUtils:97 Signature S 41fb907414a014a4a8481ca5382bb3d20958cd785d98a6a09954b7ebc15c2b56
-8-29 14:11:43.123 DEBUG[main]WalletManagerUtils:209 Result Verified
-8-29 14:55:42.277 DEBUG[main]WalletManagerUtils:199 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 14:55:42.279 DEBUG[main]WalletManagerUtils:200 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 14:55:42.280 DEBUG[main]WalletManagerUtils:201 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 14:55:42.318 DEBUG[main]WalletManagerUtils:72 Sign message content 1661756142280#1013703473159475200#2#abc
-8-29 14:55:42.320 DEBUG[main]WalletManagerUtils:73 Sign message hash 76cbda6d42a7d9276aa598629c785f5cda596e3c3853a12fb5a47fecd3ea38b7
-8-29 14:55:42.320 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 14:55:42.320 DEBUG[main]WalletManagerUtils:75 Signature R 5baca8699a0aee109c11e687861c2d4823f1fd84f75da41ed38e2b34747b8904
-8-29 14:55:42.320 DEBUG[main]WalletManagerUtils:76 Signature S 117d6116a70d0c6f1358db7657875df56c49e4136fdc786ab7e215f05e6b6797
-8-29 14:55:42.320 DEBUG[main]WalletManagerUtils:205 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661756142280, session=1013703473159475200, sequence=1, signature=5baca8699a0aee109c11e687861c2d4823f1fd84f75da41ed38e2b34747b8904117d6116a70d0c6f1358db7657875df56c49e4136fdc786ab7e215f05e6b67971c)
-8-29 14:55:42.321 DEBUG[main]WalletManagerUtils:93 Sign message content 1661756142280#1013703473159475200#2#abc
-8-29 14:55:42.321 DEBUG[main]WalletManagerUtils:94 Verfiy message hash 76cbda6d42a7d9276aa598629c785f5cda596e3c3853a12fb5a47fecd3ea38b7
-8-29 14:55:42.321 DEBUG[main]WalletManagerUtils:95 Signagure V 1c
-8-29 14:55:42.321 DEBUG[main]WalletManagerUtils:96 Signature R 5baca8699a0aee109c11e687861c2d4823f1fd84f75da41ed38e2b34747b8904
-8-29 14:55:42.321 DEBUG[main]WalletManagerUtils:97 Signature S 117d6116a70d0c6f1358db7657875df56c49e4136fdc786ab7e215f05e6b6797
-8-29 14:55:42.324 DEBUG[main]WalletManagerUtils:209 Result Verified
-8-29 15:01:30.867 DEBUG[main]WalletManagerUtils:199 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 15:01:30.869 DEBUG[main]WalletManagerUtils:200 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 15:01:30.869 DEBUG[main]WalletManagerUtils:201 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 15:01:30.898 DEBUG[main]WalletManagerUtils:72 Sign message content 1661756490870#1013704935310626816#1#abc
-8-29 15:01:30.900 DEBUG[main]WalletManagerUtils:73 Sign message hash e2ed01fe37a18d41e3f9da6cb94dc730c628f77edbc92c97a3159c13b6384cac
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:75 Signature R 2773feb8c473df438bdec118d57f00a802b8c1ed92b3d84cf8d2a21e4b43f747
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:76 Signature S 27d57953db3f58befb8ccb8de24e742ad41b6fdea37703d20fcef2e148d09fe0
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:205 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661756490870, session=1013704935310626816, sequence=0, signature=2773feb8c473df438bdec118d57f00a802b8c1ed92b3d84cf8d2a21e4b43f74727d57953db3f58befb8ccb8de24e742ad41b6fdea37703d20fcef2e148d09fe01b)
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:93 Sign message content 1661756490870#1013704935310626816#1#abc
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:94 Verfiy message hash e2ed01fe37a18d41e3f9da6cb94dc730c628f77edbc92c97a3159c13b6384cac
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:95 Signagure V 1b
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:96 Signature R 2773feb8c473df438bdec118d57f00a802b8c1ed92b3d84cf8d2a21e4b43f747
-8-29 15:01:30.901 DEBUG[main]WalletManagerUtils:97 Signature S 27d57953db3f58befb8ccb8de24e742ad41b6fdea37703d20fcef2e148d09fe0
-8-29 15:01:30.920 DEBUG[main]WalletManagerUtils:209 Result Verified
-8-29 16:02:06.244 DEBUG[main]WalletManagerUtils:199 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 16:02:06.246 DEBUG[main]WalletManagerUtils:200 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 16:02:06.246 DEBUG[main]WalletManagerUtils:201 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 16:02:06.276 DEBUG[main]WalletManagerUtils:72 Sign message content 1661760126246#1013720183241445376#1#abc
-8-29 16:02:06.278 DEBUG[main]WalletManagerUtils:73 Sign message hash 5bd0c8522cf7bf7dc3f204f4d2677eb5747ba965c3d07a2a202fa95ded1a5d4b
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:75 Signature R bfa883edd1500e92d9e82add172882eeca2fc73d5a68c6bcc3f1da4f4ec056eb
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:76 Signature S 6db90e56f49e815fa1834bfac79d9041990751917f1605f463a11f7afa010751
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:205 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661760126246, session=1013720183241445376, sequence=1, signature=bfa883edd1500e92d9e82add172882eeca2fc73d5a68c6bcc3f1da4f4ec056eb6db90e56f49e815fa1834bfac79d9041990751917f1605f463a11f7afa0107511c)
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:93 Sign message content 1661760126246#1013720183241445376#1#abc
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:94 Verfiy message hash 5bd0c8522cf7bf7dc3f204f4d2677eb5747ba965c3d07a2a202fa95ded1a5d4b
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:95 Signagure V 1c
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:96 Signature R bfa883edd1500e92d9e82add172882eeca2fc73d5a68c6bcc3f1da4f4ec056eb
-8-29 16:02:06.279 DEBUG[main]WalletManagerUtils:97 Signature S 6db90e56f49e815fa1834bfac79d9041990751917f1605f463a11f7afa010751
-8-29 16:02:06.293 DEBUG[main]WalletManagerUtils:209 Result Verified
-8-29 16:03:51.621 DEBUG[main]WalletManagerUtils:199 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
-8-29 16:03:51.623 DEBUG[main]WalletManagerUtils:200 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
-8-29 16:03:51.623 DEBUG[main]WalletManagerUtils:201 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
-8-29 16:03:51.658 DEBUG[main]WalletManagerUtils:72 Sign message content 1661760231623#1013720625262366720#1#abc
-8-29 16:03:51.659 DEBUG[main]WalletManagerUtils:73 Sign message hash 1317d59b4fb2736d3bfe4e5d311cd188c4025b0bc5ea5a9e13165a59768c79ed
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:75 Signature R 25ffe2eb6d9af26344e5b731e1f8aa71ae59a1fd0507357fcd13aa0c0bdb2c45
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:76 Signature S 259e1bb026814b68ff0339fc8440c589466457ec31ff14620588abc638ffc753
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:205 Header Header(address=0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E, timestamp=1661760231623, session=1013720625262366720, sequence=1, signature=25ffe2eb6d9af26344e5b731e1f8aa71ae59a1fd0507357fcd13aa0c0bdb2c45259e1bb026814b68ff0339fc8440c589466457ec31ff14620588abc638ffc7531c)
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:93 Sign message content 1661760231623#1013720625262366720#1#abc
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:94 Verfiy message hash 1317d59b4fb2736d3bfe4e5d311cd188c4025b0bc5ea5a9e13165a59768c79ed
-8-29 16:03:51.660 DEBUG[main]WalletManagerUtils:95 Signagure V 1c
-8-29 16:03:51.661 DEBUG[main]WalletManagerUtils:96 Signature R 25ffe2eb6d9af26344e5b731e1f8aa71ae59a1fd0507357fcd13aa0c0bdb2c45
-8-29 16:03:51.661 DEBUG[main]WalletManagerUtils:97 Signature S 259e1bb026814b68ff0339fc8440c589466457ec31ff14620588abc638ffc753
-8-29 16:03:51.675 DEBUG[main]WalletManagerUtils:209 Result Verified
-8-29 17:26:51.384  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 17:26:51.386  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 17:26:51.486 DEBUG[main]WalletManagerUtils:72 Sign message content 1661765211448#1013741510534893568#1#null
-8-29 17:26:51.491 DEBUG[main]WalletManagerUtils:73 Sign message hash 6fc805d974caa4955c331331e2ffba911b77f4e8f536197a602d0e51c99706bd
-8-29 17:26:51.491 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 17:26:51.491 DEBUG[main]WalletManagerUtils:75 Signature R 4a2ea9b1828e88ed1941618e3aeebc555634c266e208011aad9e92558685d30d
-8-29 17:26:51.491 DEBUG[main]WalletManagerUtils:76 Signature S 69de1973cac7896fcd4e6a2e4a331ae37b058e6ef074589ae18b8c94d1ed88e9
-8-29 17:26:51.495 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 17:26:51.730 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (234ms)
-8-29 17:27:55.557  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 17:27:55.559  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 17:27:55.675 DEBUG[main]WalletManagerUtils:72 Sign message content 1661765275626#1013741780094423040#1#null
-8-29 17:27:55.680 DEBUG[main]WalletManagerUtils:73 Sign message hash 13560f138a6ac0ebc42e5809b523214d90d50a10240bef05cb28b5b19f13a539
-8-29 17:27:55.680 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 17:27:55.681 DEBUG[main]WalletManagerUtils:75 Signature R 02935354f3fe000e538ffc8b53e1385b8ba0282ef3756689607e15db547e2d7e
-8-29 17:27:55.681 DEBUG[main]WalletManagerUtils:76 Signature S 745896155d6f8c7e388de0ff9aa0bf0f64436e657ad681a4b08ae3ed5ecf4408
-8-29 17:27:55.684 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 17:27:55.685 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 17:27:55.685 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1013741780094423040
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013741780094423040
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 02935354f3fe000e538ffc8b53e1385b8ba0282ef3756689607e15db547e2d7e745896155d6f8c7e388de0ff9aa0bf0f64436e657ad681a4b08ae3ed5ecf44081c
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661765275626
-8-29 17:27:55.686 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 17:27:55.687 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":1,"chain_type":"ETH","chain_id":4,"client_id":"2"}
-8-29 17:27:55.688 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 17:27:55.987 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (297ms)
-8-29 17:27:55.989 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 17:27:55.990 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 17:27:55.990 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 17:27:55.991 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 17:27:55.991 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 17:27:55.991 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 17:27:55.991 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 17:27:55.992 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 09:27:55 GMT
-8-29 17:27:55.992 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 17:27:55.992 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 17:27:55.992 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 17:27:55.992 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 17:27:55.993 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:07:49.931  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:07:49.936  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:10:54.360  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:10:54.365  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:10:54.455 DEBUG[main]WalletManagerUtils:72 Sign message content 1661767854416#1013752595887427584#1#null
-8-29 18:10:54.459 DEBUG[main]WalletManagerUtils:73 Sign message hash c987b81f99630e18e3e557894aca3e6b2959f7f41caf98ac8fae83393fe5f6cd
-8-29 18:10:54.459 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 18:10:54.459 DEBUG[main]WalletManagerUtils:75 Signature R 0201fce83d28b76c09469ab3c3211afc1f227df0a30f84c42762179e24d4f813
-8-29 18:10:54.459 DEBUG[main]WalletManagerUtils:76 Signature S 3199e42df1867fe2e2c778e775473437d5c0d2b7de71944c7e1f9ac764d75463
-8-29 18:10:54.464 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:10:54.465 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:10:54.465 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:10:54.465 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:10:54.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1013752595887427584
-8-29 18:10:54.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013752595887427584
-8-29 18:10:54.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0201fce83d28b76c09469ab3c3211afc1f227df0a30f84c42762179e24d4f8133199e42df1867fe2e2c778e775473437d5c0d2b7de71944c7e1f9ac764d754631c
-8-29 18:10:54.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661767854416
-8-29 18:10:54.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:10:54.467 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:10:54.467 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:10:54.857 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (388ms)
-8-29 18:10:54.859 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:10:54.860 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:10:54.861 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:10:54.861 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:10:54.861 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:10:54.861 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:10:54 GMT
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:10:54.862 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:10:54.863 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:13:17.082  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:13:17.084  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:13:17.188 DEBUG[main]WalletManagerUtils:72 Sign message content 1661767997139#1013753195026976768#1#null
-8-29 18:13:17.193 DEBUG[main]WalletManagerUtils:73 Sign message hash b1f846a0ddad4ca031960f63a3cefe8292e76c329932e4be8efefa77813a7285
-8-29 18:13:17.193 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 18:13:17.193 DEBUG[main]WalletManagerUtils:75 Signature R 1245a10e065ed135756d23de26efc737cb5bad9c7b1c9482ac033fc092ca6481
-8-29 18:13:17.193 DEBUG[main]WalletManagerUtils:76 Signature S 48939369b5e421d2ee725ae0cf6cf30712fee2f369af5938b9225588da2675d0
-8-29 18:13:17.198 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:13:17.199 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:13:17.199 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:13:17.199 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:13:17.200 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1013753195026976768
-8-29 18:13:17.200 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013753195026976768
-8-29 18:13:17.200 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 1245a10e065ed135756d23de26efc737cb5bad9c7b1c9482ac033fc092ca648148939369b5e421d2ee725ae0cf6cf30712fee2f369af5938b9225588da2675d01c
-8-29 18:13:17.201 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661767997139
-8-29 18:13:17.201 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:13:17.201 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:13:17.201 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:13:17.450 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (247ms)
-8-29 18:13:17.452 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:13:17.453 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:13:17.454 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:13:17.454 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:13:17.454 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:13:17.454 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:13:17.454 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:13:17 GMT
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:13:17.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:15:15.313  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:15:15.317  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:15:15.398 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768115372#1013753690927927296#1#null
-8-29 18:15:15.403 DEBUG[main]WalletManagerUtils:73 Sign message hash 7b30a93bf0c39cf10ad8b03e597f462a1fb5bbc6711deaf8fef24c7ce68b83b8
-8-29 18:15:15.403 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:15:15.403 DEBUG[main]WalletManagerUtils:75 Signature R af7721eb9b9463a8dbffa6f0a83c18fd5b3852bcafc00166e0d623a4efa8e515
-8-29 18:15:15.403 DEBUG[main]WalletManagerUtils:76 Signature S 2fb3aaf0df7e399cfe92833f223e72b16b7790b7cb530a7cf0bf77439bbd7982
-8-29 18:15:15.407 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:15:15.408 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:15:15.408 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:15:15.408 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:15:15.408 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1013753690927927296
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013753690927927296
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: af7721eb9b9463a8dbffa6f0a83c18fd5b3852bcafc00166e0d623a4efa8e5152fb3aaf0df7e399cfe92833f223e72b16b7790b7cb530a7cf0bf77439bbd79821b
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768115372
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:15:15.409 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:15:15.593 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (182ms)
-8-29 18:15:15.595 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:15:15.596 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:15:15.596 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:15:15.596 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:15:15.596 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:15:15 GMT
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:15:15.597 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:15:15.599 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:15:15.600 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:17:04.510  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:17:04.512  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:17:04.592 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768224560#1013754149029810176#1#null
-8-29 18:17:04.595 DEBUG[main]WalletManagerUtils:73 Sign message hash 8c8578e218f71d52553bcdd6107c2046c11a1442ef792593ea9fdd94bafad1e4
-8-29 18:17:04.596 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 18:17:04.596 DEBUG[main]WalletManagerUtils:75 Signature R 86046891e974f7addee0669c6eaab0219bd7c46b0515039eb130c4680ff647f9
-8-29 18:17:04.596 DEBUG[main]WalletManagerUtils:76 Signature S 42422ae601ead6b8a8a03271bc89bb201da91946a60c4c96801967bf9cbec6d4
-8-29 18:17:04.600 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:17:04.601 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:17:04.601 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:17:04.601 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:17:04.601 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:17:04.602 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013754149029810176
-8-29 18:17:04.602 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 86046891e974f7addee0669c6eaab0219bd7c46b0515039eb130c4680ff647f942422ae601ead6b8a8a03271bc89bb201da91946a60c4c96801967bf9cbec6d41c
-8-29 18:17:04.602 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768224560
-8-29 18:17:04.603 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:17:04.608 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:17:04.609 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:17:04.798 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (188ms)
-8-29 18:17:04.800 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:17:04.801 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:17:04.801 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:17:04.801 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:17:04.802 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:17:04.802 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:17:04.802 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:17:04.803 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:17:04 GMT
-8-29 18:17:04.804 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:17:04.805 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:17:04.805 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:17:04.806 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:17:04.807 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:19:12.883  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:19:12.888  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:20:12.264 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768412081#1013754687079321600#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:20:12.282 DEBUG[main]WalletManagerUtils:73 Sign message hash 73167226256117f499312650d8c159cb2cd566d6b36d1c8fad05e94c8e983673
-8-29 18:20:12.283 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:20:12.284 DEBUG[main]WalletManagerUtils:75 Signature R 4ce57eefebe0dc09e98a60ccdaaaa116122c32952a8c562f478dc3716848edb8
-8-29 18:20:12.284 DEBUG[main]WalletManagerUtils:76 Signature S 36ef01ef1506bdda116624fe94124902ece07590ac861dc4923094e91879e36b
-8-29 18:20:12.293 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:20:12.295 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:20:12.295 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:20:12.295 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:20:12.295 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:20:12.296 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013754687079321600
-8-29 18:20:12.296 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 4ce57eefebe0dc09e98a60ccdaaaa116122c32952a8c562f478dc3716848edb836ef01ef1506bdda116624fe94124902ece07590ac861dc4923094e91879e36b1b
-8-29 18:20:12.297 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768412081
-8-29 18:20:12.297 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:20:12.298 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:20:12.299 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:20:12.487 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (187ms)
-8-29 18:20:12.490 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:20:12.491 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:20:12.491 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:20:12.491 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:20:12.491 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:20:12.492 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:20:12.495 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:20:12.496 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:20:12 GMT
-8-29 18:20:12.498 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:20:12.499 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:20:12.499 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:20:12.499 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:20:12.499 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:20:35.208  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:20:35.210  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:20:35.297 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768435262#1013755032660611072#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:20:35.300 DEBUG[main]WalletManagerUtils:73 Sign message hash 2a416da1b0945f6f254f47a4ee5eb02a0a51f2df3877a1242d556487c802cad9
-8-29 18:20:35.301 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:20:35.301 DEBUG[main]WalletManagerUtils:75 Signature R 714d36f5725fa6068a7be155ab29d7a569e14541b08f302b81dc8e6383dce99b
-8-29 18:20:35.301 DEBUG[main]WalletManagerUtils:76 Signature S 0103bf7fedf379f67af27df200b4d3d5a7be07ca3b9c06eedd37113f49a3d049
-8-29 18:20:35.304 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:20:35.306 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:20:35.306 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:20:35.306 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:20:35.307 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:20:35.307 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013755032660611072
-8-29 18:20:35.308 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 714d36f5725fa6068a7be155ab29d7a569e14541b08f302b81dc8e6383dce99b0103bf7fedf379f67af27df200b4d3d5a7be07ca3b9c06eedd37113f49a3d0491b
-8-29 18:20:35.308 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768435262
-8-29 18:20:35.308 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:20:35.308 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:20:35.309 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:20:35.513 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (201ms)
-8-29 18:20:35.514 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:20:35.515 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:20:35.516 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:20:35.516 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:20:35.516 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:20:35.516 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:20:35.516 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:20:35 GMT
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:20:35.517 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:21:05.789  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:21:05.791  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:21:05.875 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768465852#1013755160876290048#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:21:05.880 DEBUG[main]WalletManagerUtils:73 Sign message hash 72cb52d0c141e5301b5fdc961cdd880c9da8331e5dfc234811e27e99d5cd4cd0
-8-29 18:21:05.880 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:21:05.880 DEBUG[main]WalletManagerUtils:75 Signature R 0564f0523b4cf5e624223bbce7ff20fcaf5e064fcd6b725e7da6f305e5a66da5
-8-29 18:21:05.880 DEBUG[main]WalletManagerUtils:76 Signature S 75488de19158bc7af755fd4cd337cc16f6adadba1b42469b918fe85d3f55b17f
-8-29 18:21:05.885 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:21:05.886 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:21:05.886 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:21:05.887 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:21:05.887 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:21:05.887 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013755160876290048
-8-29 18:21:05.887 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0564f0523b4cf5e624223bbce7ff20fcaf5e064fcd6b725e7da6f305e5a66da575488de19158bc7af755fd4cd337cc16f6adadba1b42469b918fe85d3f55b17f1b
-8-29 18:21:05.888 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768465852
-8-29 18:21:05.888 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:21:05.888 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:21:05.888 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:21:06.084 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (194ms)
-8-29 18:21:06.086 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:21:06.088 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:21:06.090 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:21:06.091 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:21:06.093 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:21:06.095 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:21:06.095 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:21:06.095 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:21:06 GMT
-8-29 18:21:06.096 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:21:06.096 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:21:06.096 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:21:06.096 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:21:06.096 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:24:30.590  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:24:30.594  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:25:04.178 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768703659#1013756019592925184#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:25:04.278 DEBUG[main]WalletManagerUtils:73 Sign message hash 427a52568e5266569256f313393ab7daebd7e5838ce65942e31d03957401fd45
-8-29 18:25:04.282 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:25:04.286 DEBUG[main]WalletManagerUtils:75 Signature R 8362067f11ce1547a86eb5d7eb82b582a74505e0991762327110ebe56360bbfa
-8-29 18:25:04.290 DEBUG[main]WalletManagerUtils:76 Signature S 4b9f62f18adee3d5cfd60acd2cf5e7e66d2a89b6bbddd038c1f94f1d21141a8a
-8-29 18:25:16.390 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:25:16.393 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:25:16.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:25:16.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:25:16.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:25:16.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013756019592925184
-8-29 18:25:16.395 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 8362067f11ce1547a86eb5d7eb82b582a74505e0991762327110ebe56360bbfa4b9f62f18adee3d5cfd60acd2cf5e7e66d2a89b6bbddd038c1f94f1d21141a8a1b
-8-29 18:25:16.395 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768703659
-8-29 18:25:16.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:25:16.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:25:16.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:25:16.577 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (180ms)
-8-29 18:25:16.580 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:25:16.581 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:25:16.582 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:25:16.582 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:25:16.582 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:25:16.583 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:25:16.583 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:25:16.584 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:25:16 GMT
-8-29 18:25:16.584 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:25:16.585 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:25:16.587 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:25:16.587 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:25:16.587 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:26:48.912  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:26:48.914  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:26:49.019 DEBUG[main]WalletManagerUtils:72 Sign message content 1661768808973#1013756599992324096#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:26:49.022 DEBUG[main]WalletManagerUtils:73 Sign message hash 7d2aabc41bfc79f00d876af5272274150a3d97fb69a3a1e4efbc84606094483e
-8-29 18:26:49.022 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 18:26:49.022 DEBUG[main]WalletManagerUtils:75 Signature R 81f42b0a101298d69936e558884510bcd957ef3a59bfd73e0b4a59fcae670736
-8-29 18:26:49.022 DEBUG[main]WalletManagerUtils:76 Signature S 6ed0494c81da099d53cf217f994ffcb63a1fd4d33e78739dd93e9bd185649dd7
-8-29 18:26:49.024 DEBUG[main]WalletManagerUtils:93 Sign message content 1661768808973#1013756599992324096#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:26:49.025 DEBUG[main]WalletManagerUtils:94 Verfiy message hash 7d2aabc41bfc79f00d876af5272274150a3d97fb69a3a1e4efbc84606094483e
-8-29 18:26:49.025 DEBUG[main]WalletManagerUtils:95 Signagure V 1c
-8-29 18:26:49.025 DEBUG[main]WalletManagerUtils:96 Signature R 81f42b0a101298d69936e558884510bcd957ef3a59bfd73e0b4a59fcae670736
-8-29 18:26:49.025 DEBUG[main]WalletManagerUtils:97 Signature S 6ed0494c81da099d53cf217f994ffcb63a1fd4d33e78739dd93e9bd185649dd7
-8-29 18:26:49.036  INFO[main]WalletManagerApiInterceptor:33 verify Verified
-8-29 18:26:49.042 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:26:49.043 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:26:49.043 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:26:49.043 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:26:49.044 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:26:49.044 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013756599992324096
-8-29 18:26:49.044 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 81f42b0a101298d69936e558884510bcd957ef3a59bfd73e0b4a59fcae6707366ed0494c81da099d53cf217f994ffcb63a1fd4d33e78739dd93e9bd185649dd71c
-8-29 18:26:49.044 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661768808973
-8-29 18:26:49.045 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:26:49.045 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:26:49.045 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:26:49.231 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (184ms)
-8-29 18:26:49.232 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:26:49.234 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:26:49.240 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:26:49.240 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:26:49.240 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:26:49.240 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
-8-29 18:26:49.242 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:26:49.242 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:26:49 GMT
-8-29 18:26:49.242 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
-8-29 18:26:49.242 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:26:49.242 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:26:49.243 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:26:49.244 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
-8-29 18:33:42.105  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:33:42.107  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:33:42.199 DEBUG[main]WalletManagerUtils:72 Sign message content 1661769222165#1013758333166817280#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:33:42.202 DEBUG[main]WalletManagerUtils:73 Sign message hash 714989684e52106db0225b3f33e62741954ef0982e8dffcb38a8ef054e3abd40
-8-29 18:33:42.203 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:33:42.203 DEBUG[main]WalletManagerUtils:75 Signature R c325cc8a963ba1fd39d45b2a382d14553f02f2adb6bddc26cec9759be86dff6c
-8-29 18:33:42.203 DEBUG[main]WalletManagerUtils:76 Signature S 20c3d82e52f9d2c125a1ee1f052820d0cd9902c551848d6a5ad1f4e4fdc3e822
-8-29 18:33:42.207 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:33:42.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:33:42.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:33:42.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:33:42.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013758333166817280
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0xc325cc8a963ba1fd39d45b2a382d14553f02f2adb6bddc26cec9759be86dff6c20c3d82e52f9d2c125a1ee1f052820d0cd9902c551848d6a5ad1f4e4fdc3e8221b
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661769222165
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:33:42.209 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:33:42.444 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (232ms)
-8-29 18:33:42.446 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:33:42.447 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:33:42.447 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:33:42.448 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:33:42.448 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:33:42.448 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 41
-8-29 18:33:42.448 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:33:42 GMT
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"29-7qcQXpnVnRJqOORhWKa8MmvgYJI"
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:33:42.449 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:33:42.452 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":null,"result":{"address":"0x4"}}
-8-29 18:33:42.457 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (41-byte body)
-8-29 18:33:42.497  INFO[main]WalletManagerClient:54 Get address response Response(result=dev.m18.walletmanager.client.entities.GetAddressResult@741b3bc3, error=null)
-8-29 18:35:35.407  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 18:35:35.410  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 18:35:35.493 DEBUG[main]WalletManagerUtils:72 Sign message content 1661769335468#1013758808402432000#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:35:35.499 DEBUG[main]WalletManagerUtils:73 Sign message hash 28ef8fced4f9f8c5694540acabfee9fe848252be91bb0287accb6d26438641ca
-8-29 18:35:35.499 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 18:35:35.500 DEBUG[main]WalletManagerUtils:75 Signature R 4aefd5ab724d51d182e30eda8516d04951982f3a81f7296c7c926d2742e25fea
-8-29 18:35:35.500 DEBUG[main]WalletManagerUtils:76 Signature S 41f0e3a28a5d68578671cd98222f8508f3d85c0d9311481fc59fcb58e1b15f6f
-8-29 18:35:35.506 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 18:35:35.507 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 18:35:35.507 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 18:35:35.507 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 18:35:35.507 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 18:35:35.508 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013758808402432000
-8-29 18:35:35.508 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x4aefd5ab724d51d182e30eda8516d04951982f3a81f7296c7c926d2742e25fea41f0e3a28a5d68578671cd98222f8508f3d85c0d9311481fc59fcb58e1b15f6f1b
-8-29 18:35:35.508 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661769335468
-8-29 18:35:35.508 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:35:35.508 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 18:35:35.509 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 18:35:35.713 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (201ms)
-8-29 18:35:35.714 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 18:35:35.714 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 18:35:35.715 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 18:35:35.715 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 18:35:35.716 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 18:35:35.716 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 41
-8-29 18:35:35.716 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 18:35:35.716 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 10:35:35 GMT
-8-29 18:35:35.717 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"29-7qcQXpnVnRJqOORhWKa8MmvgYJI"
-8-29 18:35:35.717 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 18:35:35.719 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 18:35:35.720 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 18:35:35.720 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 18:35:35.723 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":null,"result":{"address":"0x4"}}
-8-29 18:35:35.723 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (41-byte body)
-8-29 18:35:35.764  INFO[main]WalletManagerClient:54 Get address response Response(result=GetAddressResult(address=0x4), error=null)
-8-29 19:17:51.216  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 19:17:51.220  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 19:17:51.340 DEBUG[main]WalletManagerUtils:72 Sign message content 1661771871301#1013769444272377856#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 19:17:51.347 DEBUG[main]WalletManagerUtils:73 Sign message hash c86322a2533dc91182b5c452d43714fc9008d991cc014d157ba6ef8eb8d9ab4c
-8-29 19:17:51.347 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 19:17:51.347 DEBUG[main]WalletManagerUtils:75 Signature R 8063cd89d35f9423568113766febd63bf0e1956591dc87c81514f70878cbe8ca
-8-29 19:17:51.347 DEBUG[main]WalletManagerUtils:76 Signature S 4b303b250d15717dfe14a73d71e147f9674853f7efe939ded0e622eed2715ada
-8-29 19:17:51.351 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 19:17:51.356 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 19:17:51.358 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 19:17:51.358 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 19:17:51.359 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 19:17:51.359 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013769444272377856
-8-29 19:17:51.360 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x8063cd89d35f9423568113766febd63bf0e1956591dc87c81514f70878cbe8ca4b303b250d15717dfe14a73d71e147f9674853f7efe939ded0e622eed2715ada1b
-8-29 19:17:51.360 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661771871301
-8-29 19:17:51.360 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:17:51.360 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 19:17:51.362 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 19:17:51.584 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (220ms)
-8-29 19:17:51.585 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 19:17:51.586 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 19:17:51.587 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 19:17:51.588 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 19:17:51.588 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 19:17:51.588 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 41
-8-29 19:17:51.589 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 19:17:51.589 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 11:17:51 GMT
-8-29 19:17:51.589 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"29-7qcQXpnVnRJqOORhWKa8MmvgYJI"
-8-29 19:17:51.590 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 19:17:51.590 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 19:17:51.590 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 19:17:51.590 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:17:51.594 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":null,"result":{"address":"0x4"}}
-8-29 19:17:51.599 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (41-byte body)
-8-29 19:18:47.478  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 19:18:47.484  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 19:18:47.610 DEBUG[main]WalletManagerUtils:72 Sign message content 1661771927574#1013769680403304448#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"1661771927487"}
-8-29 19:18:47.616 DEBUG[main]WalletManagerUtils:73 Sign message hash edeb3835cde61c6b02f094bbafddd4229c6a3cb99dd2237496ea9e954ddd6bc6
-8-29 19:18:47.616 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 19:18:47.616 DEBUG[main]WalletManagerUtils:75 Signature R 36d42e242496575ebb65ed65c4ae931d55822f11b8fcb1b8110414e8e07e997f
-8-29 19:18:47.616 DEBUG[main]WalletManagerUtils:76 Signature S 52a958d83db04be6d38afdb89e890d29f7f1b8ad3f162d54dd741398c067cc56
-8-29 19:18:47.618 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 19:18:47.619 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 77
-8-29 19:18:47.620 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 19:18:47.620 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 19:18:47.620 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 19:18:47.620 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013769680403304448
-8-29 19:18:47.621 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x36d42e242496575ebb65ed65c4ae931d55822f11b8fcb1b8110414e8e07e997f52a958d83db04be6d38afdb89e890d29f7f1b8ad3f162d54dd741398c067cc561b
-8-29 19:18:47.621 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661771927574
-8-29 19:18:47.621 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:18:47.621 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"1661771927487"}
-8-29 19:18:47.622 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (77-byte body)
-8-29 19:18:47.811 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (187ms)
-8-29 19:18:47.813 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 19:18:47.813 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 19:18:47.814 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 19:18:47.815 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 19:18:47.815 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 19:18:47.815 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 135
-8-29 19:18:47.816 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 19:18:47.816 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 11:18:47 GMT
-8-29 19:18:47.816 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"87-XgmesJqiFULQEzX9K+PWWw6d1sU"
-8-29 19:18:47.817 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 19:18:47.817 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 19:18:47.817 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 19:18:47.818 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:18:47.821 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":{"code":-38,"message":"Cannot check available address Session: 4005889 Sequence: 21 MerchantId: 1","data":null},"result":null}
-8-29 19:18:47.826 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (135-byte body)
-8-29 19:26:00.066  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 19:26:00.070  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 19:26:00.196 DEBUG[main]WalletManagerUtils:72 Sign message content 1661772360163#1013771494863409152#1#{"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661772360071"}
-8-29 19:26:00.202 DEBUG[main]WalletManagerUtils:73 Sign message hash 775f4836f6ebba8e263c34f9aebf114b0c7ec77d27320bc23cf961a6afb43cea
-8-29 19:26:00.202 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 19:26:00.202 DEBUG[main]WalletManagerUtils:75 Signature R 4c91ddbe15043901499cb96dcd198f260914ef122d3e5d6789619f129afc5326
-8-29 19:26:00.202 DEBUG[main]WalletManagerUtils:76 Signature S 6fce80d1706a90cd1df579fa0fcf03c44c6af80a25b7eada370c7ff81574240a
-8-29 19:26:00.205 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 19:26:00.206 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 77
-8-29 19:26:00.206 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 19:26:00.207 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 19:26:00.207 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 19:26:00.207 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013771494863409152
-8-29 19:26:00.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x4c91ddbe15043901499cb96dcd198f260914ef122d3e5d6789619f129afc53266fce80d1706a90cd1df579fa0fcf03c44c6af80a25b7eada370c7ff81574240a1b
-8-29 19:26:00.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661772360163
-8-29 19:26:00.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:26:00.208 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661772360071"}
-8-29 19:26:00.210 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (77-byte body)
-8-29 19:26:00.392 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (181ms)
-8-29 19:26:00.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 19:26:00.394 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 19:26:00.395 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 19:26:00.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 19:26:00.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 19:26:00.396 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 135
-8-29 19:26:00.397 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 19:26:00.397 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 11:26:00 GMT
-8-29 19:26:00.397 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"87-t+hUFg9Q+QbHdjZYWnu8w4BVQOU"
-8-29 19:26:00.398 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 19:26:00.398 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 19:26:00.398 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 19:26:00.398 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:26:00.401 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":{"code":-38,"message":"Cannot check available address Session: 4005889 Sequence: 26 MerchantId: 3","data":null},"result":null}
-8-29 19:26:00.408 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (135-byte body)
-8-29 19:53:51.781  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 19:53:51.784  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 19:53:51.855 DEBUG[main]WalletManagerUtils:72 Sign message content 1661774031819#1013778506905030656#1#{"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661774031786"}
-8-29 19:53:51.865 DEBUG[main]WalletManagerUtils:73 Sign message hash fa1badfb640c36d28a28eb408f8240a2505cd8dbfc0fb802115001e6e7390fd4
-8-29 19:53:51.866 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
-8-29 19:53:51.866 DEBUG[main]WalletManagerUtils:75 Signature R 74a2041ee9dbedab7c52a7713fda8549eab436ce880438772e8ded7f1beac9ce
-8-29 19:53:51.866 DEBUG[main]WalletManagerUtils:76 Signature S 2a415954e38a586fce08c99ec809e58e14c89e6bac2f0fcb39d25f87358362b2
-8-29 19:53:51.868 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 19:53:51.869 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 77
-8-29 19:53:51.870 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 19:53:51.870 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 19:53:51.870 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 19:53:51.871 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013778506905030656
-8-29 19:53:51.871 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x74a2041ee9dbedab7c52a7713fda8549eab436ce880438772e8ded7f1beac9ce2a415954e38a586fce08c99ec809e58e14c89e6bac2f0fcb39d25f87358362b21c
-8-29 19:53:51.871 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661774031819
-8-29 19:53:51.871 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:53:51.871 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661774031786"}
-8-29 19:53:51.872 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (77-byte body)
-8-29 19:53:52.061 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 200 OK (187ms)
-8-29 19:53:52.063 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
-8-29 19:53:52.064 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
-8-29 19:53:52.065 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
-8-29 19:53:52.065 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
-8-29 19:53:52.066 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
-8-29 19:53:52.066 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 135
-8-29 19:53:52.066 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
-8-29 19:53:52.066 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Mon, 29 Aug 2022 11:53:52 GMT
-8-29 19:53:52.068 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"87-SIt5PAvnn8jIdnETs1VUYYcZgeA"
-8-29 19:53:52.069 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
-8-29 19:53:52.069 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
-8-29 19:53:52.069 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
-8-29 19:53:52.070 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 19:53:52.072 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"error":{"code":-38,"message":"Cannot check available address Session: 4005889 Sequence: 27 MerchantId: 3","data":null},"result":null}
-8-29 19:53:52.073 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (135-byte body)
-8-29 19:53:52.104  INFO[main]TestWalletManagerApi:43 Response Response(result=null, error=Error(code=-38, message=Cannot check available address Session: 4005889 Sequence: 27 MerchantId: 3, data=null))
-8-29 20:06:44.851  INFO[main]WalletManagerClient:25 Init WalletManagerClient instance 1
-8-29 20:06:44.854  INFO[main]WalletManagerClient:26 Wallet manager api base url http://18.143.36.162:8095/access
-8-29 20:06:44.941 DEBUG[main]WalletManagerUtils:72 Sign message content 1661774804907#1013781748594511872#1#{"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 20:06:44.952 DEBUG[main]WalletManagerUtils:73 Sign message hash 81ecda57847ad9bc781ea86bc2fe36065503e17a6f1d7080618039d1e9ab3b70
-8-29 20:06:44.952 DEBUG[main]WalletManagerUtils:74 Signagure V 1b
-8-29 20:06:44.953 DEBUG[main]WalletManagerUtils:75 Signature R e9166288d5752283952d4bd9ccb2956cf61d8afc209b3b7e729a26b82a7fbe2b
-8-29 20:06:44.953 DEBUG[main]WalletManagerUtils:76 Signature S 629e59868c2513f6e180e3183b98e94c125ae86e5414346c1dc50ffcf5518288
-8-29 20:06:44.956 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
-8-29 20:06:44.957 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 65
-8-29 20:06:44.957 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
-8-29 20:06:44.958 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
-8-29 20:06:44.958 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
-8-29 20:06:44.958 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1013781748594511872
-8-29 20:06:44.958 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0xe9166288d5752283952d4bd9ccb2956cf61d8afc209b3b7e729a26b82a7fbe2b629e59868c2513f6e180e3183b98e94c125ae86e5414346c1dc50ffcf55182881b
-8-29 20:06:44.959 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661774804907
-8-29 20:06:44.959 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
-8-29 20:06:44.960 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"1","chain_type":2,"chain_id":"4","client_id":"2"}
-8-29 20:06:44.960 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (65-byte body)
-8-29 20:06:45.020 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- ERROR SocketException: Network is unreachable (59ms)
-8-29 20:06:45.025 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] java.net.SocketException: Network is unreachable
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:576)
-	at java.base/sun.nio.ch.Net.connect(Net.java:565)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.Socket.connect(Socket.java:645)
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600)
-	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1419)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1390)
-	at feign.Client$Default.convertAndSend(Client.java:124)
-	at feign.Client$Default.execute(Client.java:67)
-	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:108)
-	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:78)
-	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103)
-	at jdk.proxy2/jdk.proxy2.$Proxy5.getAddress(Unknown Source)
-	at dev.m18.walletmanager.client.WalletManagerClient.main(WalletManagerClient.java:55)
-
-8-29 20:06:45.025 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END ERROR
+8-30 19:44:52.726  INFO[main]WalletManagerClient:20 Init WalletManagerClient instance 1
+8-30 19:44:52.736  INFO[main]WalletManagerClient:21 Wallet manager api base url http://18.143.36.162:8095/access
+8-30 19:44:52.818 DEBUG[main]WalletManagerUtils:72 Sign message content 1661859892768#1014138633814282240#1#{"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661859892739"}
+8-30 19:44:52.824 DEBUG[main]WalletManagerUtils:73 Sign message hash adbeae37def61934f2fc49909333f741f751706a530c3f64bf35ad8a46fd51aa
+8-30 19:44:52.825 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
+8-30 19:44:52.825 DEBUG[main]WalletManagerUtils:75 Signature R 38d1f47686b44ee019866c94f55f6b94fe4d8cd5eba007fd2e3a488664f2c3b7
+8-30 19:44:52.825 DEBUG[main]WalletManagerUtils:76 Signature S 33025346e92461fe0a0cdbfac0ad32472072f4e54e110929c278361e6d1f9fe1
+8-30 19:44:52.826 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> POST http://18.143.36.162:8095/access/get_address HTTP/1.1
+8-30 19:44:52.826 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Length: 77
+8-30 19:44:52.826 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] Content-Type: application/json
+8-30 19:44:52.827 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
+8-30 19:44:52.827 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Sequence: 1
+8-30 19:44:52.827 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Session: 1014138633814282240
+8-30 19:44:52.827 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Signature: 0x38d1f47686b44ee019866c94f55f6b94fe4d8cd5eba007fd2e3a488664f2c3b733025346e92461fe0a0cdbfac0ad32472072f4e54e110929c278361e6d1f9fe11c
+8-30 19:44:52.828 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] X-Message-Timestamp: 1661859892768
+8-30 19:44:52.829 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] 
+8-30 19:44:52.829 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] {"merchant_id":"3","chain_type":2,"chain_id":"4","client_id":"1661859892739"}
+8-30 19:44:52.830 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] ---> END HTTP (77-byte body)
+8-30 19:44:53.016 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- HTTP/1.1 401 Unauthorized (185ms)
+8-30 19:44:53.023 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-credentials: true
+8-30 19:44:53.024 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
+8-30 19:44:53.025 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
+8-30 19:44:53.027 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] access-control-allow-origin: *
+8-30 19:44:53.028 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] connection: keep-alive
+8-30 19:44:53.028 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-length: 67
+8-30 19:44:53.029 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] content-type: application/json; charset=utf-8
+8-30 19:44:53.029 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] date: Tue, 30 Aug 2022 11:44:53 GMT
+8-30 19:44:53.029 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
+8-30 19:44:53.030 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] keep-alive: timeout=5
+8-30 19:44:53.034 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] vary: Accept
+8-30 19:44:53.035 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] x-powered-by: Express
+8-30 19:44:53.036 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getAddress] <--- END HTTP (0-byte body)
+8-30 20:14:36.249  INFO[main]WalletManagerClient:20 Init WalletManagerClient instance 1
+8-30 20:14:36.252  INFO[main]WalletManagerClient:21 Wallet manager api base url http://18.143.36.162:8095/access
+8-30 20:14:36.292 DEBUG[main]WalletManagerUtils:72 Sign message content 1661861676259#1014146114447740928#1#Binary data
+8-30 20:14:36.299 DEBUG[main]WalletManagerUtils:73 Sign message hash e3963870e76c1e759c45efc4fd96387bc53cd39213250ce364340bdbcf20a8ed
+8-30 20:14:36.299 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
+8-30 20:14:36.299 DEBUG[main]WalletManagerUtils:75 Signature R 7e690655e489ec0b0fb8b04e3d5e038ccef776250d4b73c3e837cf0c653750ac
+8-30 20:14:36.300 DEBUG[main]WalletManagerUtils:76 Signature S 3c2697254be8a170cd2f8541ded06f6472a0defd22a9b453d983f527cfeadee1
+8-30 20:14:36.302 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] ---> GET http://18.143.36.162:8095/access/withdraw/batch/56 HTTP/1.1
+8-30 20:14:36.303 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
+8-30 20:14:36.305 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Sequence: 1
+8-30 20:14:36.305 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Session: 1014146114447740928
+8-30 20:14:36.306 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Signature: 0x7e690655e489ec0b0fb8b04e3d5e038ccef776250d4b73c3e837cf0c653750ac3c2697254be8a170cd2f8541ded06f6472a0defd22a9b453d983f527cfeadee11c
+8-30 20:14:36.307 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Timestamp: 1661861676259
+8-30 20:14:36.308 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] ---> END HTTP (0-byte body)
+8-30 20:14:36.453 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] <--- HTTP/1.1 401 Unauthorized (143ms)
+8-30 20:14:36.455 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-credentials: true
+8-30 20:14:36.457 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
+8-30 20:14:36.458 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
+8-30 20:14:36.462 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-origin: *
+8-30 20:14:36.465 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] connection: keep-alive
+8-30 20:14:36.466 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] content-length: 67
+8-30 20:14:36.467 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] content-type: application/json; charset=utf-8
+8-30 20:14:36.468 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] date: Tue, 30 Aug 2022 12:14:36 GMT
+8-30 20:14:36.469 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
+8-30 20:14:36.470 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] keep-alive: timeout=5
+8-30 20:14:36.473 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] vary: Accept
+8-30 20:14:36.475 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] x-powered-by: Express
+8-30 20:14:36.475 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] 
+8-30 20:14:36.478 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] {"error":{"code":401,"message":"Signature Mismatched","data":null}}
+8-30 20:14:36.480 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] <--- END HTTP (67-byte body)
+8-30 20:19:05.792 DEBUG[main]WalletManagerUtils:207 0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E
+8-30 20:19:05.797 DEBUG[main]WalletManagerUtils:208 0x4786842fb09835899306df06daf2fe988ac6691cb1df8f0dc4b9e76d60a0ad3f8459c6d24299194756010423416ffb01bc2623af00b176401283e97d0183188f
+8-30 20:19:05.798 DEBUG[main]WalletManagerUtils:209 0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085
+8-30 20:19:37.220  INFO[main]WalletManagerClient:20 Init WalletManagerClient instance 1
+8-30 20:19:37.225  INFO[main]WalletManagerClient:21 Wallet manager api base url http://18.143.36.162:8095/access
+8-30 20:23:34.705 DEBUG[main]WalletManagerUtils:72 Sign message content 1661862212867#1014147376673198080#1#
+8-30 20:23:34.723 DEBUG[main]WalletManagerUtils:73 Sign message hash 24869e3660ff6f58d1c027cf353cb996de6cc04d72fb896cbf9e4190f79c94e9
+8-30 20:23:34.723 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
+8-30 20:23:34.724 DEBUG[main]WalletManagerUtils:75 Signature R 22d90a4a4e6556418c5accc8d57a6312723422e9538df2f52aba1a0e054609a2
+8-30 20:23:34.724 DEBUG[main]WalletManagerUtils:76 Signature S 2e5e90fa842a7ea12b027e67012400397ea145f765203fbec16269cc1c99d51d
+8-30 20:23:34.729 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] ---> GET http://18.143.36.162:8095/access/withdraw/batch/56 HTTP/1.1
+8-30 20:23:34.731 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
+8-30 20:23:34.732 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Sequence: 1
+8-30 20:23:34.733 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Session: 1014147376673198080
+8-30 20:23:34.734 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Signature: 0x22d90a4a4e6556418c5accc8d57a6312723422e9538df2f52aba1a0e054609a22e5e90fa842a7ea12b027e67012400397ea145f765203fbec16269cc1c99d51d1c
+8-30 20:23:34.735 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] X-Message-Timestamp: 1661862212867
+8-30 20:23:34.735 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] ---> END HTTP (0-byte body)
+8-30 20:23:34.929 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] <--- HTTP/1.1 401 Unauthorized (191ms)
+8-30 20:23:34.931 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-credentials: true
+8-30 20:23:34.934 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
+8-30 20:23:34.937 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
+8-30 20:23:34.939 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] access-control-allow-origin: *
+8-30 20:23:34.940 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] connection: keep-alive
+8-30 20:23:34.941 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] content-length: 67
+8-30 20:23:34.942 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] content-type: application/json; charset=utf-8
+8-30 20:23:34.943 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] date: Tue, 30 Aug 2022 12:23:34 GMT
+8-30 20:23:34.944 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
+8-30 20:23:34.945 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] keep-alive: timeout=5
+8-30 20:23:34.947 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] vary: Accept
+8-30 20:23:34.949 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] x-powered-by: Express
+8-30 20:23:34.949 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] 
+8-30 20:23:34.952 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] {"error":{"code":401,"message":"Signature Mismatched","data":null}}
+8-30 20:23:34.957 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getWithdrawByBatchId] <--- END HTTP (67-byte body)
+8-30 20:26:32.947  INFO[main]WalletManagerClient:20 Init WalletManagerClient instance 1
+8-30 20:26:32.950  INFO[main]WalletManagerClient:21 Wallet manager api base url http://18.143.36.162:8095/access
+8-30 20:26:32.991 DEBUG[main]WalletManagerUtils:72 Sign message content 1661862392957#1014149120442503168#1#
+8-30 20:26:32.996 DEBUG[main]WalletManagerUtils:73 Sign message hash 0febbe78c1a138825ffea32ca5784e7a5ada6f622b0384736b9641a4a4b24c41
+8-30 20:26:32.997 DEBUG[main]WalletManagerUtils:74 Signagure V 1c
+8-30 20:26:32.997 DEBUG[main]WalletManagerUtils:75 Signature R a6abd8618b99bc620517b26ab0b12b0c836baf8cdbf4dd2a4bc2e38a4ee3eac3
+8-30 20:26:32.997 DEBUG[main]WalletManagerUtils:76 Signature S 50264e458c3e87100532bb9d22c0ebd15643afcc08a38d5400e535d8356082c3
+8-30 20:26:33.004 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] ---> GET http://18.143.36.162:8095/access/2/4/transfer/addr/0x8F9092CE573e41d72378Cf8c9d3335584e6843F1/deposit/USDT?offset=0&limit=10 HTTP/1.1
+8-30 20:26:33.006 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] X-Message-Address: 0xd8D584ba78C6c7d02674764B2286A51C2495E192
+8-30 20:26:33.007 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] X-Message-Sequence: 1
+8-30 20:26:33.008 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] X-Message-Session: 1014149120442503168
+8-30 20:26:33.009 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] X-Message-Signature: 0xa6abd8618b99bc620517b26ab0b12b0c836baf8cdbf4dd2a4bc2e38a4ee3eac350264e458c3e87100532bb9d22c0ebd15643afcc08a38d5400e535d8356082c31c
+8-30 20:26:33.010 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] X-Message-Timestamp: 1661862392957
+8-30 20:26:33.011 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] ---> END HTTP (0-byte body)
+8-30 20:26:33.156 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] <--- HTTP/1.1 401 Unauthorized (143ms)
+8-30 20:26:33.164 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] access-control-allow-credentials: true
+8-30 20:26:33.166 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] access-control-allow-headers: X-Requested-With,Content-Type,Authorization,X-Message-Signature,X-Message-Address,X-Message-Timestamp,X-Message-Session,X-Message-Sequence
+8-30 20:26:33.170 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] access-control-allow-methods: GET, POST, OPTIONS, PUT, PATCH, DELETE
+8-30 20:26:33.172 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] access-control-allow-origin: *
+8-30 20:26:33.173 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] connection: keep-alive
+8-30 20:26:33.174 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] content-length: 67
+8-30 20:26:33.175 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] content-type: application/json; charset=utf-8
+8-30 20:26:33.176 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] date: Tue, 30 Aug 2022 12:26:33 GMT
+8-30 20:26:33.177 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] etag: W/"43-LgGgaOuKpa7+Q0jfHfJpVUdldJM"
+8-30 20:26:33.179 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] keep-alive: timeout=5
+8-30 20:26:33.180 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] vary: Accept
+8-30 20:26:33.184 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] x-powered-by: Express
+8-30 20:26:33.186 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] 
+8-30 20:26:33.188 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] {"error":{"code":401,"message":"Signature Mismatched","data":null}}
+8-30 20:26:33.189 DEBUG[main]WalletManagerApi:72 [WalletManagerApi#getDepositByAddress] <--- END HTTP (67-byte body)
