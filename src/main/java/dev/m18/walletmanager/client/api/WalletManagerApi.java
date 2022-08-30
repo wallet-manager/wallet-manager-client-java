@@ -17,50 +17,35 @@ import feign.Headers;
 import feign.Param;
 import feign.RequestLine;
 
-public interface WalletManagerApi {
+public interface WalletManagerApi extends WalletManagerServerApi{
 	
-	/**
-	 * Get client deposit address by clientId
-	 * @param request
-	 * @return
-	 */
+
 	@RequestLine("POST /get_address")
 	@Headers("Content-Type: application/json")
 	@Body("{request}")
+	@Override
 	Response<GetAddressResult> getAddress(
 			@Param(value = "request", expander = JacksonExpander.class)
 			GetAddressRequest request);
 	
-	/**
-	 * Send a batch withdraw request.
-	 * @param request
-	 * @return
-	 */
 	@RequestLine("POST /batch_withdraw")
 	@Headers("Content-Type: application/json")
 	@Body("{request}")
+	@Override
 	Response<BatchWithdrawResult> batchWithdraw(
 			@Param(value = "request", expander = JacksonExpander.class)
 			BatchWithdrawRequest request);
 	
-	/**
-	 * Send a batch sweep request.
-	 * @param request
-	 * @return
-	 */
 	@RequestLine("POST /batch_sweep")
 	@Headers("Content-Type: application/json")
 	@Body("{request}")
+	@Override
 	Response<BatchSweepResult> batchSweep(
 			@Param(value = "request", expander = JacksonExpander.class)
 			BatchSweepRequest request);
 	
-	/**
-	 * Get deposit by address.
-	 * `/${chain_type}/${chain_id}/transfer/addr/${address}/deposit/${asset_name}`
-	 * @return
-	 */
 	@RequestLine("GET /{chain_type}/{chain_id}/transfer/addr/{address}/deposit/{asset_name}?offset={offset}&limit={limit}")
+	@Override
 	Response<GetDepositByAddressResult> getDepositByAddress(
 			@Param(value = "chain_type")
 			Integer chainType,
@@ -75,12 +60,8 @@ public interface WalletManagerApi {
 			@Param(value = "limit")
 			Integer limit);
 	
-	/**
-	 * Get deposit by address.
-	 * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
-	 * @return
-	 */
 	@RequestLine("GET /{chain_type}/{chain_id}/transfer/hash/{tx_hash}/deposit")
+	@Override
 	Response<GetDepositByHashResult> getDepositByHash(
 			@Param(value = "chain_type")
 			Integer chainType,
@@ -89,22 +70,15 @@ public interface WalletManagerApi {
 			@Param(value = "tx_hash")
 			String txHash);
 	
-	/**
-	 * Get withdraw by merchant order id
-	 * `/withdraw/order/${merchant_order_id}`
-	 * @return
-	 */
+
 	@RequestLine("GET /withdraw/order/{merchant_order_id}")
+	@Override
 	Response<Operation> getWithdrawByOrderId(
 			@Param(value = "merchant_order_id")
 			String merchantOrderId);
 	
-	/**
-	 * Get withdraw by operation batch ID returned in {@link #batchWithdraw(BatchWithdrawRequest)}
-	 * `/withdraw/batch/${batch_id}`
-	 * @return
-	 */
 	@RequestLine("GET /withdraw/batch/{batch_id}")
+	@Override
 	Response<OperationBatch> getWithdrawByBatchId(
 			@Param(value = "batch_id")
 			Long batchId);

@@ -35,10 +35,9 @@ public class WalletManagerUtils {
 	private long sessionId;
 	private ECKeyPair keyPair;
 	private String address;
-
+	
 	public WalletManagerUtils(String privateKey, int instanceId) {
-		Snowflake snowflake = new Snowflake(instanceId);
-		this.sessionId = snowflake.nextId();
+		this.sessionId = genSnowflakeId(instanceId);
 		this.keyPair = ECKeyPair.create(privateKey(privateKey));
 		this.address = getAddressFromPublicKey(keyPair.getPublicKey());
 	}
@@ -126,6 +125,11 @@ public class WalletManagerUtils {
 
 	public String getAddress() {
 		return this.address;
+	}
+	
+	public static Long genSnowflakeId(int instanceId) {
+		Snowflake snowflake = new Snowflake(instanceId);
+		return snowflake.nextId();
 	}
 
 	public static byte[] sha256(String content) {
