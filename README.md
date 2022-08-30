@@ -128,9 +128,14 @@ WalletManagerClient client = new WalletManagerClient(
 				config.getClientConfig().getBaseURL(),
 				config.getClientConfig().getInstanceId()
 			);	
+			
+WalletManagerUtils utils = client.getUtils();
 
 WalletManagerApi api = client.getApi();
 ```
+
+Methods of api are declared in [WalletManagerServerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/main/java/dev/m18/walletmanager/client/api/WalletManagerServerApi.java)
+
 
 ```
 /**
@@ -195,6 +200,6 @@ Response<OperationBatch> getWithdrawByBatchId(Long batchId);
 
 # Testcases
 
-Testcases of calling API methods are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerApi.java "TestWalletManagerApi")
+Testcases of calling API methods are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerApi.java)
 
 
