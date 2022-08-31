@@ -289,7 +289,7 @@ if(operation != null) {
 	}
 }
 
-```\
+```
 
 ## Get withdraw by batch id
 
@@ -316,16 +316,16 @@ Testcases of calling API methods are implemented in [TestWalletManagerApi](https
 
 # Generate Bip32 ECDSA Key
 ```
-	public class WalletGenerator {
+public class WalletGenerator {
+	
+	public static void main(String[] args) {
 		
-		public static void main(String[] args) {
-			
-			Identity identity = WalletManagerUtils.generateBip32ECKey();
-			
-			System.out.println("Seed:\t" + identity.getSeed());
-			System.out.println("Private Key:\t" + identity.getPrivateKey());
-			System.out.println("Public Key:\t" + identity.getPublicKey());
-			System.out.println("Address: \t" + identity.getAddress());
-		}
+		Identity identity = WalletManagerUtils.generateBip32ECKey();
+		
+		System.out.println("Seed:\t" + identity.getSeed());
+		System.out.println("Private Key:\t" + identity.getPrivateKey());
+		System.out.println("Public Key:\t" + identity.getPublicKey());
+		System.out.println("Address: \t" + identity.getAddress());
 	}
+}
 ```
