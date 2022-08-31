@@ -2,26 +2,52 @@ package dev.m18.walletmanager.client.entities;
 
 import java.math.BigInteger;
 
-import dev.m18.walletmanager.client.enums.OperationBatchStatus;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import dev.m18.walletmanager.client.enums.OperationStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import lombok.Data;
 
 @Data
 public class Operation {
 
-	  Long merchant_id;
-	  Long batch_id;
-	  Long operation_seq;
-	  Long merchant_order_id;
-	  String path;
-	  String from_address;
-	  String to_addresss;
-	  String invoker_address;
-	  OperationType operation_type;
-	  BigInteger amount;
-	  String asset_name;
-	  OperationBatchStatus status;
-	  Long create_date;
-	  Long last_modified_date;
+	@JsonProperty("merchant_id")
+	Long merchantId;
 	
+	@JsonProperty("batch_id")
+	Long batchId;
+	
+	@JsonProperty("operation_seq")
+	Long operationSeq;
+	
+	@JsonProperty("merchant_order_id")
+	Long merchantOrderId;
+	
+	String path;
+	
+	@JsonProperty("from_address")
+	String fromAddress;
+	
+	@JsonProperty("to_addresss")
+	String toAddresss;
+	
+	@JsonProperty("invoker_address")
+	String invokerAddress;
+	
+	@JsonProperty("operation_type")
+	OperationType operationType;
+	
+	BigInteger amount;
+	
+	@JsonProperty("asset_name")
+	String assetName;
+	
+	OperationStatus status;
+	
+	@JsonProperty("create_date")
+	Long createDate;
+	
+	@JsonProperty("last_modified_date")
+	Long lastModifiedDate;
+
 }

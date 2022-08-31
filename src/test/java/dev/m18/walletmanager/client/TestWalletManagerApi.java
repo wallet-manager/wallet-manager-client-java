@@ -2,6 +2,7 @@ package dev.m18.walletmanager.client;
 
 import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +18,11 @@ import dev.m18.walletmanager.client.entities.GetDepositByHashResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
 import dev.m18.walletmanager.client.entities.Response;
+import dev.m18.walletmanager.client.entities.TransferTransaction;
 import dev.m18.walletmanager.client.enums.ChainType;
+import dev.m18.walletmanager.client.enums.OperationBatchStatus;
+import dev.m18.walletmanager.client.enums.OperationStatus;
+import dev.m18.walletmanager.client.enums.TransactionStatus;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -25,6 +30,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 	
 	WalletManagerClient client;
 	long orderSeq = System.currentTimeMillis();
+	long clientSeq = System.currentTimeMillis();
 
     @Before
     @Override
@@ -44,11 +50,14 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 		request.setMerchantId(3L);
 		request.setChainType(ChainType.ETH);
 		request.setChainId(ChainId.Rinkeby);
-//		request.setClientId("2");
-		request.setClientId("" + System.currentTimeMillis());
+		request.setClientId("C" + clientSeq++);
 		
 		
 		Response<GetAddressResult> response = client.getApi().getAddress(request);
+		GetAddressResult result = response.getResult();
+		if(result != null) {
+			log.info("Address of client id {} is {}", request.getClientId(), result.getAddress());
+		}
 		
 		log.info("Get Address Response {}", response);
     }
@@ -80,6 +89,11 @@ public class TestWalletManagerApi extends ConfigUnitTest{
         
         Response<BatchWithdrawResult> response = client.getApi().batchWithdraw(request);
         
+        BatchWithdrawResult result = response.getResult();
+        if(result != null) {
+        	log.info("Successfully sent batch withdraw request. batch id {}", result.getBatchId());
+        }
+        
     	log.info("Batch Withdraw Response {}", response);
     }
     
@@ -99,9 +113,26 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     }
     
     @Test
-    public void testGetDepositByHash() {    	
+    public void testGetDepositByHash() {    
+    	
     	Response<GetDepositByHashResult> response = 
     			client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111");
+    	
+    	GetDepositByHashResult result = response.getResult();
+    	if(result != null) {
+    		
+    		// filter confirmed success transaction
+    		Optional<TransferTransaction> deposit = result.getTransactions().stream().filter(
+    				tx -> {
+    					// Success and not a fee transaction
+        				return TransactionStatus.ConfirmedSuccess.equals(tx.getStatus()) && 
+        						Boolean.FALSE.equals(tx.getIsFee());
+    				}).findFirst();
+    		
+    		if(deposit.isPresent()) {
+    			log.info("Depsit success txid {}", deposit.get().getTxHash());
+    		}
+    	}
     	
     	log.info("Get Deposit by Hash {}", response);
     }
@@ -110,12 +141,29 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     public void testGetWithdrawByOrderId() {
     	Response<Operation> response = client.getApi().getWithdrawByOrderId("100002123");
     	
+    	Operation operation = response.getResult();
+    	if(operation != null) {
+    		if(OperationStatus.Completed.equals(operation.getStatus())) {
+    			log.info("Withdraw complete. merchant order id{}", operation.getMerchantOrderId());
+    		}
+    	}
+    	
     	log.info("Get withdraw by order Id {}", response);
     }
     
     @Test
     public void testGetWithdrawByBatchId() {
-    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(56L);
+    	Long batchId = 56L;
+    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(batchId);
+    	
+    	OperationBatch batch = response.getResult();
+    	if(batch != null) {
+    		if(OperationBatchStatus.Completed.equals(batch.getStatus())) {
+    			for(Operation operation : batch.getOperations()) {
+    				log.info("Withdraw {}. merchant order id{}", operation.getStatus(),operation.getMerchantOrderId());
+    			}
+    		}
+    	}
     	
     	log.info("Get withdraw by batch Id {}", response);
     }

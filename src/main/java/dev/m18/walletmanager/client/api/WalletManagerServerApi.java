@@ -38,6 +38,9 @@ public interface WalletManagerServerApi {
 	
 	/**
 	 * Get deposit by address.
+	 * Confirmed success transaction by
+	 * {@link dev.m18.walletmanager.client.entities.TransferTransaction#getStatus() status} is
+	 * {@link dev.m18.walletmanager.client.enums.TransactionStatus#ConfirmedSuccess ConfirmedSuccess}
 	 * `/${chain_type}/${chain_id}/transfer/addr/${address}/deposit/${asset_name}`
 	 * @return
 	 */
@@ -50,7 +53,11 @@ public interface WalletManagerServerApi {
 			Integer limit);
 	
 	/**
-	 * Get deposit by address.
+	 * Get deposit by tx hash. 
+	 * Confirmed success transaction by
+	 * {@link dev.m18.walletmanager.client.entities.TransferTransaction#getStatus()} is
+	 * {@link dev.m18.walletmanager.client.enums.TransactionStatus#ConfirmedSuccess}
+	 * 
 	 * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
 	 * @return
 	 */

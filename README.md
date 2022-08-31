@@ -173,7 +173,7 @@ Response<GetDepositByAddressResult> getDepositByAddress(
 		Integer limit);
 
 /**
- * Get deposit by address.
+ * Get deposit by tx hash.
  * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
  * @return
  */
@@ -195,6 +195,117 @@ Response<Operation> getWithdrawByOrderId(String merchantOrderId);
  * @return
  */
 Response<OperationBatch> getWithdrawByBatchId(Long batchId);
+```
+
+# Examples
+
+## Get address
+
+```
+	GetAddressRequest request = new GetAddressRequest();
+	
+	request.setMerchantId(3L);
+	request.setChainType(ChainType.ETH);
+	request.setChainId(ChainId.Rinkeby);
+	request.setClientId("C" + clientSeq++);
+	
+	
+	Response<GetAddressResult> response = client.getApi().getAddress(request);
+	GetAddressResult result = response.getResult();
+	if(result != null) {
+		log.info("Address of client id {} is {}", request.getClientId(), result.getAddress());
+	}
+```
+
+
+## Withdraw request
+
+```
+    // prepare orders
+    WithdrawOrder order1 = new WithdrawOrder();
+    order1.setMerchantOrderId("W" + orderSeq++);
+    order1.setAmount(new BigInteger("1000000"));
+    order1.setDecimals(6);
+    order1.setToAddress("0x8F9092CE573e41d72378Cf8c9d3335584e6843F2");
+    
+    WithdrawOrder order2 = new WithdrawOrder();
+    order2.setMerchantOrderId("W" + orderSeq++);
+    order2.setAmount(new BigInteger("1000000"));
+    order2.setDecimals(6);
+    order2.setToAddress("0x8F9092CE573e41d72378Cf8c9d3335584e6843F2");
+
+    BatchWithdrawRequest request = new BatchWithdrawRequest();
+    request.setMerchantId(3L);
+    request.setChainType(ChainType.ETH);
+    request.setChainId(ChainId.Rinkeby);
+    request.setAssetName("USDT");     
+    request.setOrders(List.of(order1, order2));
+    request.setClientData("abc");
+    
+    
+    Response<BatchWithdrawResult> response = client.getApi().batchWithdraw(request);
+    
+    BatchWithdrawResult result = response.getResult();
+    if(result != null) {
+        log.info("Successfully sent batch withdraw request. batch id {}", result.getBatchId());
+    }
+
+```
+
+
+## Get transaction by hash.
+
+```
+    	Response<GetDepositByHashResult> response = 
+    			client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111");
+    	
+    	GetDepositByHashResult result = response.getResult();
+    	if(result != null) {
+    		
+    		// filter confirmed success transaction
+    		Optional<TransferTransaction> deposit = result.getTransactions().stream().filter(
+    				tx -> {
+        				return tx.getStatus().equals(TransactionStatus.ConfirmedSuccess) && 
+        						tx.getIsFee().equals(false);
+    				}).findFirst();
+    		
+    		if(deposit.isPresent()) {
+    			log.info("Deposit success txid {}", deposit.get().getTxHash());
+    		}
+    	}
+
+```
+
+
+## Get withdraw by merchant order id
+
+```
+    	Response<Operation> response = client.getApi().getWithdrawByOrderId("100002123");
+    	
+    	Operation operation = response.getResult();
+    	if(operation != null) {
+    		if(OperationStatus.Completed.equals(operation.getStatus())) {
+    			log.info("Withdraw complete. merchant order id{}", operation.getMerchantOrderId());
+    		}
+    	}
+
+```
+
+## Get withdraw by batch id
+
+```
+    	Long batchId = 56L;
+    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(batchId);
+    	
+    	OperationBatch batch = response.getResult();
+    	if(batch != null) {
+    		if(OperationBatchStatus.Completed.equals(batch.getStatus())) {
+    			for(Operation operation : batch.getOperations()) {
+    				log.info("Withdraw {}. merchant order id{}", operation.getStatus(),operation.getMerchantOrderId());
+    			}
+    		}
+    	}
+
 ```
 
 

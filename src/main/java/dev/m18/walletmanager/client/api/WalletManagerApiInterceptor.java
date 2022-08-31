@@ -20,8 +20,8 @@ public class WalletManagerApiInterceptor implements RequestInterceptor {
 
 		String body = "";
 		
-		if(template.method().equals(HttpMethod.GET.name())) {
-			template.requestBody().asString();	
+		if(!template.method().equals(HttpMethod.GET.name())) {
+			body = template.requestBody().asString();	
 		}
 
 		// sign content
