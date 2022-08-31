@@ -91,7 +91,7 @@ public class Header {
 ```
 
 
-##Sign
+## Sign
 
 
 ```
@@ -100,7 +100,7 @@ Header header = utils.sign("message to be signed");
 ```
 
 
-##Verify
+## Verify
 
 Verify message from a HTTP request.
 
@@ -289,7 +289,7 @@ if(operation != null) {
 	}
 }
 
-```
+```\
 
 ## Get withdraw by batch id
 
@@ -314,3 +314,18 @@ if(batch != null) {
 Testcases of calling API methods are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerApi.java)
 
 
+# Generate Bip32 ECDSA Key
+```
+	public class WalletGenerator {
+		
+		public static void main(String[] args) {
+			
+			Identity identity = WalletManagerUtils.generateBip32ECKey();
+			
+			System.out.println("Seed:\t" + identity.getSeed());
+			System.out.println("Private Key:\t" + identity.getPrivateKey());
+			System.out.println("Public Key:\t" + identity.getPublicKey());
+			System.out.println("Address: \t" + identity.getAddress());
+		}
+	}
+```

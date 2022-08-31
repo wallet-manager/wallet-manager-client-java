@@ -1,4 +1,4 @@
-package dev.m18.walletmanager.client;
+package dev.m18.walletmanager.client.entities;
 
 import java.io.IOException;
 
@@ -16,28 +16,7 @@ public class Config {
 	Identity identity;
 	ServerConfig serverConfig;
 	ClientConfig clientConfig;
-	
 
-	@Data
-	public class Identity {
-		String privateKey;
-		String publicKey;
-		String address;
-	}
-
-	@Data
-	public class ServerConfig {
-		int serverPort;
-		int messageExpiredInMs;
-
-	}
-
-	@Data
-	public class ClientConfig {
-		int instanceId;
-		String baseURL;
-		boolean contentTypeJson;
-	}
 
 	public static Config read() throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper objectMapper = new ObjectMapper().setSerializationInclusion(Include.NON_NULL)

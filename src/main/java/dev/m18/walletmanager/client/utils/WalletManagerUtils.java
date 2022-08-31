@@ -4,10 +4,12 @@ import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
+import org.web3j.crypto.Bip32ECKeyPair;
 import org.web3j.crypto.ECKeyPair;
 import org.web3j.crypto.Keys;
 import org.web3j.crypto.Sign;
@@ -15,6 +17,7 @@ import org.web3j.crypto.Sign.SignatureData;
 import org.web3j.utils.Numeric;
 
 import dev.m18.walletmanager.client.entities.Header;
+import dev.m18.walletmanager.client.entities.Identity;
 import dev.m18.walletmanager.client.enums.VerifyResult;
 import lombok.extern.slf4j.Slf4j;
 
@@ -186,6 +189,30 @@ public class WalletManagerUtils {
 		System.arraycopy(signatureBytes, 32, s, 0, 32);
 		System.arraycopy(signatureBytes, 64, v, 0, 1);
 		return new SignatureData(v, r, s);
+	}
+	
+	public static Identity generateBip32ECKey() {
+		return generateBip32ECKey(null);
+	}
+	
+	public static Identity generateBip32ECKey(String randomInput) {
+		
+		SecureRandom random = randomInput != null ? new SecureRandom(randomInput.getBytes()) : new SecureRandom();
+		byte seed[] = new byte[2048];
+		random.nextBytes(seed);
+		Bip32ECKeyPair keyPair = Bip32ECKeyPair.generateKeyPair(seed);
+		
+		Identity identity = new Identity();
+		String privateKey = WalletManagerUtils.privateKey(keyPair.getPrivateKey());
+		String publicKey = WalletManagerUtils.publicKey(keyPair.getPublicKey());
+		String address = WalletManagerUtils.getAddressFromPublicKey(keyPair.getPublicKey());
+		
+		identity.setSeed(Hex.encodeHexString(seed));
+		identity.setPrivateKey(privateKey);
+		identity.setPublicKey(publicKey);
+		identity.setAddress(address);
+		
+		return identity;
 	}
 
 	private static String remove0x(String hex) {
