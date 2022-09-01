@@ -13,13 +13,14 @@ import feign.slf4j.Slf4jLogger;
 
 public class ApiFactory {
 
-	public static WalletManagerApi makeWalletManagerApi(String baseUrl, WalletManagerUtils utils) {
+	public static WalletManagerApi makeWalletManagerApi(
+			String baseUrl, WalletManagerUtils utils, Logger.Level loggerLevel) {
 		Builder builder = Feign.builder()
 				.options(new Request.Options(WalletManagerConstants.HTTP_CONNECTION_TIMEOUT_MS,
 						WalletManagerConstants.HTTP_READ_TIMEOUT_MS))
 				.encoder(new JacksonEncoder()).decoder(new JacksonDecoder())
 				.logger(new Slf4jLogger(WalletManagerApi.class))
-				.logLevel(Logger.Level.FULL)
+				.logLevel(loggerLevel)
 				.retryer(Retryer.NEVER_RETRY)
 				.requestInterceptor(new WalletManagerApiInterceptor(utils));
 

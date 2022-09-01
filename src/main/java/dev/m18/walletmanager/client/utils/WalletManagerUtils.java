@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.codec.DecoderException;
@@ -52,7 +53,7 @@ public class WalletManagerUtils {
 	 * @param body
 	 * @return
 	 */
-	private String contentToBeSigned(Header header, String body) {
+	private static String contentToBeSigned(Header header, String body) {
 		return new StringBuilder().append(header.getTimestamp()).append("#").append(header.getSession()).append("#")
 				.append(header.getSequence()).append("#").append(body).toString();
 	}
@@ -83,7 +84,11 @@ public class WalletManagerUtils {
 
 	}
 
-	public VerifyResult verify(Header header, String body, long expiredInMs) {
+	public static VerifyResult verify(Set<String> whiteListedAddresses, Header header, String body, long expiredInMs) {
+		
+		if(!whiteListedAddresses.contains(header.getAddress())) {
+			return VerifyResult.InvalidAddress;
+		}
 
 		String content = contentToBeSigned(header, body);
 
@@ -180,7 +185,7 @@ public class WalletManagerUtils {
 	}
 
 	public static SignatureData signature(String signature) throws DecoderException {
-		byte[] signatureBytes = Hex.decodeHex(signature);
+		byte[] signatureBytes = Hex.decodeHex(remove0x(signature));
 
 		byte[] r = new byte[32];
 		byte[] s = new byte[32];
@@ -243,7 +248,9 @@ public class WalletManagerUtils {
 		Header header = utils.sign(body);
 		log.debug("Header {}", header);
 
-		VerifyResult result = utils.verify(header, body, 60000);
+		Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E", "0xd8D584ba78C6c7d02674764B2286A51C2495E192");
+		
+		VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, 60000);
 
 		log.debug("Result {}", result);
 

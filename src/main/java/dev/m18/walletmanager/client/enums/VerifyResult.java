@@ -4,6 +4,7 @@ import lombok.Getter;
 
 public enum VerifyResult implements IntEnum{
 	
+	InvalidAddress(-2),
     Expired(-1),
     SignatureNotMatch(0),
     Verified(1);

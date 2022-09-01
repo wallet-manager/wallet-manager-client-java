@@ -105,14 +105,19 @@ Header header = utils.sign("message to be signed");
 Verify message from a HTTP request.
 
 ```
-Header header = ...; // Initialise Header by get values from HTTP header.
-String body = ...; // message from HTTP body
-Long expiredInMs = 60000; // define expired time of this message.
+// Initialise Header by get values from HTTP header.
+Header header = ...;
+// message from HTTP body 
+String body = ...; 
+// define expired time of this message.
+Long expiredInMs = 60000; 
+// white listed address
+Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E"); 
 
 // verify message
 // return a enum VerifyResult with values
 // Expired(-1), SignatureNotMatch(0) or Verified(1);
-VerifyResult result = utils.verify(header, body, expiredInMs);
+VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, expiredInMs);
 
 ```
 
@@ -315,6 +320,7 @@ Testcases of calling API methods are implemented in [TestWalletManagerApi](https
 
 
 # Generate Bip32 ECDSA Key
+
 ```
 public class WalletGenerator {
 	
