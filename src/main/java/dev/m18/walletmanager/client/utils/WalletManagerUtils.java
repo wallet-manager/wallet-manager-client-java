@@ -17,8 +17,14 @@ import org.web3j.crypto.Sign;
 import org.web3j.crypto.Sign.SignatureData;
 import org.web3j.utils.Numeric;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
 import dev.m18.walletmanager.client.entities.Header;
 import dev.m18.walletmanager.client.entities.Identity;
+import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
+import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback;
+import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback;
 import dev.m18.walletmanager.client.enums.VerifyResult;
 import lombok.extern.slf4j.Slf4j;
 
@@ -234,6 +240,27 @@ public class WalletManagerUtils {
 		} else {
 			return "0x" + hex;
 		}
+	}
+	
+	public static DepositStatusCallback parseDepositStatusCallback(String json) 
+			throws JsonMappingException, JsonProcessingException {
+		
+		return ObjectMapperUtils.getObjectMapper().readValue(json, DepositStatusCallback.class);
+		
+	}
+	
+	public static OperationStatusCallback parseOperationStatusCallback(String json) 
+			throws JsonMappingException, JsonProcessingException {
+		
+		return ObjectMapperUtils.getObjectMapper().readValue(json, OperationStatusCallback.class);
+		
+	}
+	
+	public static OperationBatchStatusCallback parseOperationBatchStatusCallback(String json) 
+			throws JsonMappingException, JsonProcessingException {
+		
+		return ObjectMapperUtils.getObjectMapper().readValue(json, OperationBatchStatusCallback.class);
+		
 	}
 
 	public static void main(String[] args) {
