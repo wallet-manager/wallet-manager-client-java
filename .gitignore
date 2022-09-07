@@ -6,3 +6,5 @@ target/
 .classpath
 walletManagerClient.log
 walletManagerClient.log.*
+
+src/test/resources/config.json
