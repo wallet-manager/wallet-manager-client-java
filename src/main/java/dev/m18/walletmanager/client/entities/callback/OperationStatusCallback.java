@@ -1,12 +1,14 @@
 package dev.m18.walletmanager.client.entities.callback;
 
 import java.math.BigInteger;
+import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.OperationStatus;
+import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import lombok.Data;
 
@@ -61,7 +63,7 @@ public class OperationStatusCallback {
 	OperationStatus status;
 	
 	@JsonProperty("updated_time")
-	Long updatedTime;
+	Date updatedTime;
 	
 	List<Transaction> transactions;
 	
@@ -80,6 +82,10 @@ public class OperationStatusCallback {
 		
 		@JsonProperty("tx_hash")
 		String txHash;
+		
+		OperationTransactionStatus status;
+		
+		String remark;
 	}
 	
 }

@@ -1,6 +1,7 @@
 package dev.m18.walletmanager.client.entities.callback;
 
 import java.math.BigInteger;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -42,16 +43,16 @@ public class DepositStatusCallback {
 	TransactionStatus status;
 	
 	@JsonProperty("updated_time")
-	Long updatedTime;
+	Date updatedTime;
 	
 	@JsonProperty("block_number")
-	Long blockNumber;
+	Date blockNumber;
 	
 	@JsonProperty("block_hash")
 	String blockHash;
 	
 	@JsonProperty("block_time")
-	Long blockTime;
+	Date blockTime;
 	
 	@JsonProperty("tx_hash")
 	String txHash;

@@ -1,5 +1,7 @@
 package dev.m18.walletmanager.client.entities.callback;
 
+import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import dev.m18.walletmanager.client.enums.ChainType;
@@ -34,6 +36,6 @@ public class OperationBatchStatusCallback {
 	OperationBatchStatus status;
 	
 	@JsonProperty("updated_time")
-	Long updatedTime;
+	Date updatedTime;
 	
 }

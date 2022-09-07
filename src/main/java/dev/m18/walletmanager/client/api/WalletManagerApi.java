@@ -60,7 +60,7 @@ public interface WalletManagerApi extends WalletManagerServerApi{
 			@Param(value = "limit")
 			Integer limit);
 	
-	@RequestLine("GET /{chain_type}/{chain_id}/transfer/hash/{tx_hash}/deposit")
+	@RequestLine("GET /{chain_type}/{chain_id}/transfer/hash/{tx_hash}/deposit?offset={offset}&limit={limit}")
 	@Override
 	Response<GetDepositByHashResult> getDepositByHash(
 			@Param(value = "chain_type")
@@ -68,19 +68,32 @@ public interface WalletManagerApi extends WalletManagerServerApi{
 			@Param(value = "chain_id")
 			Long chainId,
 			@Param(value = "tx_hash")
-			String txHash);
+			String txHash,
+			@Param(value = "offset")
+			Integer offset,
+			@Param(value = "limit")
+			Integer limit);
 	
 
-	@RequestLine("GET /withdraw/order/{merchant_order_id}")
+	@RequestLine("GET /withdraw/order/{merchant_order_id}?offset={offset}&limit={limit}")
 	@Override
 	Response<Operation> getWithdrawByOrderId(
 			@Param(value = "merchant_order_id")
-			String merchantOrderId);
+			String merchantOrderId,
+			@Param(value = "offset")
+			Integer offset,
+			@Param(value = "limit")
+			Integer limit);
 	
-	@RequestLine("GET /withdraw/batch/{batch_id}")
+	@RequestLine("GET /withdraw/batch/{batch_id}?offset={offset}&limit={limit}")
 	@Override
 	Response<OperationBatch> getWithdrawByBatchId(
 			@Param(value = "batch_id")
-			Long batchId);
+			Long batchId,
+			@Param(value = "offset")
+			Integer offset,
+			@Param(value = "limit")
+			Integer limit);
+			
 	
 }

@@ -103,8 +103,8 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     	Response<GetDepositByAddressResult> response = client.getApi().getDepositByAddress(
 				ChainType.ETH.getIntVal(), 
 				ChainId.Rinkeby, 
-				"0x8F9092CE573e41d72378Cf8c9d3335584e6843F1", 
-				"USDT", 
+				"0xaa2a674256017f7B71f8f7dF36041C5187D7B68E", 
+				"UNI", 
 				0, 
 				10);
 		
@@ -116,7 +116,12 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     public void testGetDepositByHash() {    
     	
     	Response<GetDepositByHashResult> response = 
-    			client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111");
+    			client.getApi().getDepositByHash(
+    					ChainType.ETH.getIntVal(), 
+    					ChainId.Rinkeby, 
+    					"0x1976e40062b6024d52667a6c88508a2ec0716ab50107ebfc26095beb4e8e4851",
+    					0, 
+    					10);
     	
     	GetDepositByHashResult result = response.getResult();
     	if(result != null) {
@@ -139,7 +144,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     
     @Test
     public void testGetWithdrawByOrderId() {
-    	Response<Operation> response = client.getApi().getWithdrawByOrderId("100002123");
+    	Response<Operation> response = client.getApi().getWithdrawByOrderId("W1662104213630", 0, 10);
     	
     	Operation operation = response.getResult();
     	if(operation != null) {
@@ -153,8 +158,8 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     
     @Test
     public void testGetWithdrawByBatchId() {
-    	Long batchId = 56L;
-    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(batchId);
+    	Long batchId = 168L;
+    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(batchId, 0, 10);
     	
     	OperationBatch batch = response.getResult();
     	if(batch != null) {

@@ -2,6 +2,10 @@ package dev.m18.walletmanager.client.utils;
 
 import java.io.IOException;
 import java.math.BigInteger;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.lang3.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -24,7 +28,9 @@ import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import dev.m18.walletmanager.client.enums.TransactionType;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class ObjectMapperUtils {
 
 	protected static ObjectMapper objectMapper = null;
@@ -65,6 +71,44 @@ public class ObjectMapperUtils {
 					return Long.parseLong(p.getValueAsString());
 				}
 			});			
+
+			// java.util.Date
+			
+			module.addSerializer(Date.class, new JsonSerializer<Date>() {
+
+				@Override
+				public void serialize(Date value, JsonGenerator gen, SerializerProvider serializers)
+						throws IOException {
+					gen.writeNumber(value.getTime());
+				}
+
+			});
+
+			module.addDeserializer(Date.class, new JsonDeserializer<Date>() {
+
+				@Override
+				public Date deserialize(JsonParser p, DeserializationContext ctxt)
+						throws IOException, JsonProcessingException {
+					String dateStr = p.getValueAsString();
+					try {
+						if(StringUtils.isNumeric(dateStr)) {
+							if(dateStr.length() <= 10 ) {
+								// 1662535759  * 1000
+								return new Date(Long.parseLong(dateStr) * 1000);
+							}else {
+								return new Date(Long.parseLong(dateStr)); 
+							}
+						}else {
+							SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+							return format.parse(dateStr);
+						}						
+					}catch(Exception e){
+						log.error("Parse date string error " + dateStr, e);
+						return null; 
+					}
+
+				}
+			});	
 			
 			// BigInteger
 			

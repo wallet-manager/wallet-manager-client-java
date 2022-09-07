@@ -100,9 +100,9 @@ Header header = utils.sign("message to be signed");
 ```
 
 
-## Verify
+## Verify and Extract Callback
 
-Verify message from a HTTP request.
+Verify message from a HTTP callback.
 
 ```
 // Initialise Header by get values from HTTP header.
@@ -111,7 +111,7 @@ Header header = ...;
 String body = ...; 
 // define expired time of this message.
 Long expiredInMs = 60000; 
-// white listed address
+// white listed addresses
 Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E"); 
 
 // verify message
@@ -119,6 +119,28 @@ Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8
 // Expired(-1), SignatureNotMatch(0) or Verified(1);
 VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, expiredInMs);
 
+
+// if the response from "/merchant/deposit_status"
+DepositStatusCallback callback = WalletManagerUtils.parseDepositStatusCallback(body);
+
+// if the response from "/merchant/operation_status"
+OperationStatusCallback callback = WalletManagerUtils.parseOperationStatusCallback(body);
+
+// if the response from "/merchant/operation_batch_status"
+OperationBatchStatusCallback callback = WalletManagerUtils.parseOperationBatchStatusCallback(body);
+
+// process callback here
+...
+
+// If process succeeded
+Response<Boolean> response = new Response<>();
+response.setResult(true);
+    	
+// If process failed
+Response<Boolean> response = new Response<>();
+response.setResult(false);
+
+// Finally, send response in JSON format.
 ```
 
 
@@ -318,6 +340,8 @@ if(batch != null) {
 
 Testcases of calling API methods are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerApi.java)
 
+
+Testcases of extracting callback request are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerCallback.java)
 
 # Generate Bip32 ECDSA Key
 

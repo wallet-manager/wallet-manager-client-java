@@ -1,6 +1,7 @@
 package dev.m18.walletmanager.client.entities;
 
 import java.math.BigInteger;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -21,7 +22,7 @@ public class Operation {
 	Long operationSeq;
 	
 	@JsonProperty("merchant_order_id")
-	Long merchantOrderId;
+	String merchantOrderId;
 	
 	String path;
 	
@@ -45,9 +46,9 @@ public class Operation {
 	OperationStatus status;
 	
 	@JsonProperty("create_date")
-	Long createDate;
+	Date createDate;
 	
 	@JsonProperty("last_modified_date")
-	Long lastModifiedDate;
+	Date lastModifiedDate;
 
 }

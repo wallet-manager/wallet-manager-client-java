@@ -5,6 +5,7 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback;
@@ -69,6 +70,11 @@ public class TestWalletManagerCallback {
     			+ "	}";
     	OperationStatusCallback callback = WalletManagerUtils.parseOperationStatusCallback(json);
     	log.info("Deposit status {}", callback);
+    	
+    	// set success response
+    	Response<Boolean> response = new Response<>();
+    	response.setResult(true);
+    	// sent out response
     }
     
     @Test

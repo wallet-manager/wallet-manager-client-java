@@ -1,6 +1,7 @@
 package dev.m18.walletmanager.client.entities;
 
 import java.math.BigInteger;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -52,7 +53,7 @@ public class TransferTransaction {
 	BigInteger transFee;
 	
 	@JsonProperty("trans_date")
-	Long transDate;
+	Date transDate;
 	
 	@JsonProperty("wallet_address")
 	String walletAddress;
@@ -70,10 +71,10 @@ public class TransferTransaction {
 	TransactionStatus status;
 	
 	@JsonProperty("wallet_settlement_date")
-	Long walletSettlementDate;
+	Date walletSettlementDate;
 	
 	@JsonProperty("creatd_date")
-	Long creatdDate;
+	Date creatdDate;
 	
 	@JsonProperty("post_balance")
 	Long postBalance;

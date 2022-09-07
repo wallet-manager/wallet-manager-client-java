@@ -1,5 +1,6 @@
 package dev.m18.walletmanager.client.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -36,10 +37,10 @@ public class OperationBatch {
     OperationBatchStatus status;
     
     @JsonProperty("create_date")
-    Long createDate;
+    Date createDate;
     
     @JsonProperty("last_modified_date")
-    Long lastModifiedDate;
+    Date lastModifiedDate;
     
     List<Operation> operations;
 	

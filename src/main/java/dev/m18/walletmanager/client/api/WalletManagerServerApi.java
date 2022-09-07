@@ -11,6 +11,7 @@ import dev.m18.walletmanager.client.entities.GetDepositByHashResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
 import dev.m18.walletmanager.client.entities.Response;
+import feign.Param;
 
 public interface WalletManagerServerApi {
 
@@ -64,20 +65,28 @@ public interface WalletManagerServerApi {
 	Response<GetDepositByHashResult> getDepositByHash(
 			Integer chainType,
 			Long chainId,
-			String txHash);
+			String txHash,
+			Integer offset,
+			Integer limit);
 	
 	/**
 	 * Get withdraw by merchant order id
 	 * `/withdraw/order/${merchant_order_id}`
 	 * @return
 	 */
-	Response<Operation> getWithdrawByOrderId(String merchantOrderId);
+	Response<Operation> getWithdrawByOrderId(
+			String merchantOrderId,
+			Integer offset,
+			Integer limit);
 	
 	/**
 	 * Get withdraw by operation batch ID returned in {@link #batchWithdraw(BatchWithdrawRequest)}
 	 * `/withdraw/batch/${batch_id}`
 	 * @return
 	 */
-	Response<OperationBatch> getWithdrawByBatchId(Long batchId);
+	Response<OperationBatch> getWithdrawByBatchId(
+			Long batchId,
+			Integer offset,
+			Integer limit);
 	
 }
