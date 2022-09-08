@@ -1,0 +1,16 @@
+{
+	"identity": {
+		"privateKey": "PRIVATE_KEY",
+		"publicKey": "PUBLIC_KEY",
+		"address": "ADDRESS"
+	},
+	"serverConfig": {
+		"serverPort": 8080,
+		"messageExpiredInMs": 6000000
+	},
+	"clientConfig": {
+		"instanceId": 1,
+		"baseURL": "http://wallet-manager-access-server-ip:port/access",
+		"contentTypeJson": true
+	}
+}

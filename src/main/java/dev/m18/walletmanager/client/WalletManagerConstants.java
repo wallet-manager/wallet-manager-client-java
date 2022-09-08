@@ -14,6 +14,7 @@ public class WalletManagerConstants {
     
     
     public static class ChainId{
+    	public static final Long Default = 1L;
         public static final Long Ethereum = 1L;
         public static final Long Rinkeby = 4L;
         public static final Long BSC = 56L;
