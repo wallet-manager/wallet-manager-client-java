@@ -341,7 +341,7 @@ if(batch != null) {
 Testcases of calling API methods are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerApi.java)
 
 
-Testcases of extracting callback request are implemented in [TestWalletManagerApi](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerCallback.java)
+Testcases of extracting callback request are implemented in [TestWalletManagerCallback](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/src/test/java/dev/m18/walletmanager/client/TestWalletManagerCallback.java)
 
 # Generate Bip32 ECDSA Key
 
