@@ -23,7 +23,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import dev.m18.walletmanager.client.entities.Header;
 import dev.m18.walletmanager.client.entities.Identity;
 import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
-import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback;
+import dev.m18.walletmanager.client.entities.callback.MerchantCallback;
+import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback.OperationBatchStatusCallbackData;
 import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback;
 import dev.m18.walletmanager.client.enums.VerifyResult;
 import lombok.extern.slf4j.Slf4j;
@@ -242,42 +243,37 @@ public class WalletManagerUtils {
 		}
 	}
 	
-	public static DepositStatusCallback parseDepositStatusCallback(String json) 
+	public static MerchantCallback parseMerchantCallback(String json) 
 			throws JsonMappingException, JsonProcessingException {
 		
-		return ObjectMapperUtils.getObjectMapper().readValue(json, DepositStatusCallback.class);
-		
+		return ObjectMapperUtils.getObjectMapper().readValue(json, MerchantCallback.class);
 	}
 	
-	public static OperationStatusCallback parseOperationStatusCallback(String json) 
-			throws JsonMappingException, JsonProcessingException {
-		
-		return ObjectMapperUtils.getObjectMapper().readValue(json, OperationStatusCallback.class);
-		
-	}
-	
-	public static OperationBatchStatusCallback parseOperationBatchStatusCallback(String json) 
-			throws JsonMappingException, JsonProcessingException {
-		
-		return ObjectMapperUtils.getObjectMapper().readValue(json, OperationBatchStatusCallback.class);
-		
-	}
 
 	public static void main(String[] args) {
 
-		WalletManagerUtils utils = new WalletManagerUtils(
-				"0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085", 1);
-		log.debug(utils.getAddress());
-		log.debug(utils.getPublicKey());
-		log.debug(utils.getPrivateKey());
-
-		String body = "abc";
-		Header header = utils.sign(body);
-		log.debug("Header {}", header);
-
-		Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8bc57E", "0xd8D584ba78C6c7d02674764B2286A51C2495E192");
+//		WalletManagerUtils utils = new WalletManagerUtils(
+//				"0xaaaacfa6385cd439f23c0be005f3bb9e9303d6b1525e0168ca4b7044e5379085", 1);
+//		log.debug(utils.getAddress());
+//		log.debug(utils.getPublicKey());
+//		log.debug(utils.getPrivateKey());
 		
-		VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, 60000);
+		
+//		Header header = utils.sign(body);
+//		log.debug("Header {}", header);
+
+		String body = "{\"type\":\"deposit_status\",\"data\":{\"id\":104,\"merchant_id\":1,\"chain_type\":1,\"chain_id\":1,\"client_id\":\"525a1134205946a3348b0507cc3af213\",\"trans_type\":1,\"wallet_address\":\"1LjAYqbJQRL1U1kPmo7MPHmMWPbaj1M3Qc\",\"from_address\":\"1Cxu9uvTkBFVmFN7vvT4dTCsBbrqod4QjP\",\"asset_name\":\"BTC\",\"amount\":\"10000\",\"decimals\":8,\"status\":2,\"updated_time\":1664351487,\"block_number\":\"756030\",\"block_hash\":\"0000000000000000000534b74798cec3ed91ff62fa4049ae38ce3723d01cf262\",\"block_time\":1664349920,\"tx_hash\":\"30e929ac8ae51a9f32805a774e9cc73b5f6bb3a662ef7d1c716d69327548ec51\"}}";
+		Header header = new Header();
+		header.setAddress("0x55eD3b16A77BbA3f1D64faEC075F7BF0CFFCfb7C");
+		header.setSequence(1);
+		header.setSession(4360192);
+		header.setSignature("0xc9210b26d15b4f3127e88f60e5e559c97f5389f62271a0c77bd0c33263484b3122f0e4475e0225cedfa2a3e2a2d134227de9530735b8320fab5e69f29e230d191c");
+		header.setTimestamp(1664351487642L);
+
+
+		Set<String> whiteListedAddresses = Set.of("0x55eD3b16A77BbA3f1D64faEC075F7BF0CFFCfb7C");
+		
+		VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, 60000000);
 
 		log.debug("Result {}", result);
 

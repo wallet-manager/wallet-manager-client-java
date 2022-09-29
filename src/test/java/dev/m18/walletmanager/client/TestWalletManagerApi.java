@@ -32,7 +32,6 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 	long orderSeq = System.currentTimeMillis();
 	long clientSeq = System.currentTimeMillis();
 
-	private static Long MERCHANT_ID = 3L;
 	private static ChainType CHAIN_TYPE = ChainType.ETH;
 	private static Long CHAIN_ID = ChainId.Rinkeby;
 	
@@ -51,7 +50,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     	
 		GetAddressRequest request = new GetAddressRequest();
 		
-		request.setMerchantId(MERCHANT_ID);
+		request.setMerchantId(config.getMerhcnatId());
 		request.setChainType(CHAIN_TYPE);
 		request.setChainId(CHAIN_ID);
 		request.setClientId("C" + clientSeq++);
@@ -83,7 +82,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
         order2.setToAddress("0x8F9092CE573e41d72378Cf8c9d3335584e6843F2");
 
         BatchWithdrawRequest request = new BatchWithdrawRequest();
-        request.setMerchantId(MERCHANT_ID);
+        request.setMerchantId(config.getMerhcnatId());
         request.setChainType(CHAIN_TYPE);
         request.setChainId(CHAIN_ID);
         request.setAssetName("USDT");     
@@ -123,7 +122,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     			client.getApi().getDepositByHash(
     					CHAIN_TYPE.getIntVal(), 
     					CHAIN_ID, 
-    					"0x1976e40062b6024d52667a6c88508a2ec0716ab50107ebfc26095beb4e8e4851",
+    					"0x5890c794096a98008f1e0d60feb93076169a1def754e4015971db8215e450ff1",
     					0, 
     					10);
     	

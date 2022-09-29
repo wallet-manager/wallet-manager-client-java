@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class Config {
 	
+	Long merhcnatId;
 	Identity identity;
 	ServerConfig serverConfig;
 	ClientConfig clientConfig;
