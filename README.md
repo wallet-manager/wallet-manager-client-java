@@ -120,17 +120,40 @@ Set<String> whiteListedAddresses = Set.of("0xeD0fe4A3F67938faB2E37EfcB93402EF7b8
 VerifyResult result = WalletManagerUtils.verify(whiteListedAddresses, header, body, expiredInMs);
 
 
-// if the response from "/merchant/deposit_status"
-DepositStatusCallback callback = WalletManagerUtils.parseDepositStatusCallback(body);
+// Parse callback
+MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(body);
 
-// if the response from "/merchant/operation_status"
-OperationStatusCallback callback = WalletManagerUtils.parseOperationStatusCallback(body);
+// if type == "deposit_status"
+if(callback.isDepositStatusCallback()){
+	// Convert to DepositStatusCallback
+	DepositStatusCallback depositStatusCallback = callback.toDepositStatusCallback();
+	// process callback here
+	...
+}
 
-// if the response from "/merchant/operation_batch_status"
-OperationBatchStatusCallback callback = WalletManagerUtils.parseOperationBatchStatusCallback(body);
+// if type == "operation_status"
+if(callback.isOperationStatusCallback()){
+	// Convert to OperationStatusCallback
+	OperationStatusCallback operationStatusCallback = callback.toOperationStatusCallback();
+	// process callback here
+	...
+}
 
-// process callback here
-...
+// if type == "operation_batch_status"
+if(callback.isOperationBatchStatusCallback()){
+	// Convert to OperationBatchStatusCallback
+	OperationBatchStatusCallback operationBatchStatusCallback = callback.toOperationBatchStatusCallback();
+	// process callback here
+	...
+}
+
+// if type == "operation_batch_status"
+if(callback.isVerifyWithdrawCallback()){
+	// Convert to VerifyWithdrawCallback
+	VerifyWithdrawCallback verifyWithdrawCallback = callback.toVerifyWithdrawCallback();
+	// process callback here
+	...
+}
 
 // If process succeeded
 Response<Boolean> response = new Response<>();

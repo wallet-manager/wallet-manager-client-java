@@ -5,13 +5,11 @@ import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.OperationStatus;
 import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
-import dev.m18.walletmanager.client.utils.ObjectMapperUtils;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package dev.m18.walletmanager.client.entities;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -24,6 +24,9 @@ public class Operation {
 	@JsonProperty("merchant_order_id")
 	String merchantOrderId;
 	
+	@JsonProperty("wallet_version")
+	Integer walletVersion;
+	
 	String path;
 	
 	@JsonProperty("from_address")
@@ -38,7 +41,7 @@ public class Operation {
 	@JsonProperty("operation_type")
 	OperationType operationType;
 	
-	BigInteger amount;
+	BigDecimal amount;
 	
 	@JsonProperty("asset_name")
 	String assetName;

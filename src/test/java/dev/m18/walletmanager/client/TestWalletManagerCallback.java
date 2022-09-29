@@ -11,6 +11,7 @@ import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.MerchantCallback;
 import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback;
+import dev.m18.walletmanager.client.entities.callback.VerifyWithdrawCallback;
 import dev.m18.walletmanager.client.utils.WalletManagerUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -120,6 +121,49 @@ public class TestWalletManagerCallback {
     	Assert.assertTrue("is operation batch status callback", callback.isOperationBatchStatusCallback());	
     	OperationBatchStatusCallback operationBatchStatusCallback = callback.toOperationBatchStatusCallback();
 		log.info("Operation batch status {}", operationBatchStatusCallback);
+    }
+    
+    @Test
+    public void verifyWithdrawCallback() throws JsonMappingException, JsonProcessingException {
+    	String json = "{\n"
+    			+ "	\"type\": \"verify_withdraw_transaction\",\n"
+    			+ "	\"merchant_id\": \"1\",\n"
+    			+ "	\"data\": {\n"
+    			+ "		\"merchant_id\": \"1\",\n"
+    			+ "		\"operation_type\": 1,\n"
+    			+ "		\"batch_id\": \"95\",\n"
+    			+ "		\"chain_type\": 2,\n"
+    			+ "		\"chain_id\": 97,\n"
+    			+ "		\"total_operation\": 1,\n"
+    			+ "		\"client_data\": \"rano_test001\",\n"
+    			+ "		\"request_time\": \"1664353075\",\n"
+    			+ "		\"operations\": [\n"
+    			+ "			{\n"
+    			+ "				\"merchant_order_id\": \"W1664353074780\",\n"
+    			+ "				\"merchant_id\": \"1\",\n"
+    			+ "				\"operation_seq\": 1,\n"
+    			+ "				\"operation_type\": 1,\n"
+    			+ "				\"batch_id\": \"95\",\n"
+    			+ "				\"wallet_version\": 1,\n"
+    			+ "				\"wallet_path\": \"\",\n"
+    			+ "				\"asset_name\": \"BNB\",\n"
+    			+ "				\"amount\": \"100000000000000000\",\n"
+    			+ "				\"decimals\": 18,\n"
+    			+ "				\"from_address\": \"0xE41abb573ADa45a22CE12736966D8839118bbe24\",\n"
+    			+ "				\"to_address\": \"0x5f1d06d369092da06D897971Fce3BF150F8735B3\",\n"
+    			+ "				\"request_time\": \"0\"\n"
+    			+ "			}\n"
+    			+ "		]\n"
+    			+ "	}\n"
+    			+ "}";
+
+
+    	
+    	MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(json);
+    	
+    	Assert.assertTrue("is verify withdraw callback", callback.isVerifyWithdrawCallback());	
+    	VerifyWithdrawCallback verifyWithdrawCallback = callback.toVerifyWithdrawCallback();
+		log.info("Verify withdraw callback {}", verifyWithdrawCallback);
     }
 	
 }

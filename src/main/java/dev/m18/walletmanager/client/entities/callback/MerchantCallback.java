@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback.DepositStatusCallbackData;
 import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback.OperationBatchStatusCallbackData;
 import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback.OperationStatusCallbackData;
+import dev.m18.walletmanager.client.entities.callback.VerifyWithdrawCallback.VerifyWithdrawCallbackData;
 import dev.m18.walletmanager.client.utils.ObjectMapperUtils;
 import lombok.Data;
 
@@ -59,6 +60,24 @@ public class MerchantCallback implements Callback {
 			OperationStatusCallback callback = new OperationStatusCallback();
 			OperationStatusCallbackData data = ObjectMapperUtils.getObjectMapper().treeToValue(this.getData(),
 					OperationStatusCallbackData.class);
+			callback.setData(data);
+			return callback;
+		} else {
+			throw new RuntimeException("Callback type not match");
+		}
+	}
+	
+	
+	public boolean isVerifyWithdrawCallback () {
+		return this.getType().equals(VerifyWithdrawCallback.VERIFY_WITHDRAW_TRANSACTION);
+	}
+	
+	public VerifyWithdrawCallback toVerifyWithdrawCallback() throws JsonProcessingException {
+		
+		if (this.isVerifyWithdrawCallback()) {
+			VerifyWithdrawCallback callback = new VerifyWithdrawCallback();
+			VerifyWithdrawCallbackData data = ObjectMapperUtils.getObjectMapper().treeToValue(this.getData(),
+					VerifyWithdrawCallbackData.class);
 			callback.setData(data);
 			return callback;
 		} else {

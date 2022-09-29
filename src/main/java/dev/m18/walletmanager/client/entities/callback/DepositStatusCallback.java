@@ -4,11 +4,9 @@ import java.math.BigInteger;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
-import dev.m18.walletmanager.client.utils.ObjectMapperUtils;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
