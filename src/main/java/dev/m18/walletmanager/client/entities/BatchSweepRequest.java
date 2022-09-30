@@ -17,7 +17,7 @@ public class BatchSweepRequest {
     String merchantOrderId;
     
 	@JsonProperty("chain_type")
-    ChainType chainType;
+    Integer chainType;
     
 	@JsonProperty("chain_id")
     Long chainId;

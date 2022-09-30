@@ -51,7 +51,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 		GetAddressRequest request = new GetAddressRequest();
 		
 		request.setMerchantId(config.getMerhcnatId());
-		request.setChainType(CHAIN_TYPE);
+		request.setChainType(CHAIN_TYPE.getIntVal());
 		request.setChainId(CHAIN_ID);
 		request.setClientId("C" + clientSeq++);
 		
@@ -83,7 +83,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 
         BatchWithdrawRequest request = new BatchWithdrawRequest();
         request.setMerchantId(config.getMerhcnatId());
-        request.setChainType(CHAIN_TYPE);
+        request.setChainType(CHAIN_TYPE.getIntVal());
         request.setChainId(CHAIN_ID);
         request.setAssetName("USDT");     
         request.setOrders(List.of(order1, order2));

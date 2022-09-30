@@ -45,7 +45,7 @@ public class OperationBatchStatusCallback implements Callback {
 		Long merchantId;
 
 		@JsonProperty("chain_type")
-		ChainType chainType;
+		Integer chainType;
 
 		@JsonProperty("chain_id")
 		Long chainId;

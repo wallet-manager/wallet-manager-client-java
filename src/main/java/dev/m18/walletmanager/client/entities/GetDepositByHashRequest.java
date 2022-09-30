@@ -11,7 +11,7 @@ import lombok.Data;
 public class GetDepositByHashRequest {
 
 	@JsonProperty("chain_type")
-	ChainType chainType;
+	Integer chainType;
 	
 	@JsonProperty("chain_id")
     BigInteger chainId;

@@ -9,7 +9,7 @@ import lombok.Data;
 public class GetDepositByAddressRequest {
 
 	@JsonProperty("chain_type")
-	ChainType chainType;
+	Integer chainType;
 	
 	@JsonProperty("chain_id")
 	Long chainId;
