@@ -39,7 +39,7 @@ public static SignatureData signature(String signature) throws DecoderException;
 ```
 
 
-#Sign and Verify
+# Sign and Verify
 
 Signature and related information are store in a Header object.
 
@@ -147,7 +147,7 @@ if(callback.isOperationBatchStatusCallback()){
 	...
 }
 
-// if type == "operation_batch_status"
+// if type == "verify_withdraw_transaction"
 if(callback.isVerifyWithdrawCallback()){
 	// Convert to VerifyWithdrawCallback
 	VerifyWithdrawCallback verifyWithdrawCallback = callback.toVerifyWithdrawCallback();
@@ -306,24 +306,29 @@ if(result != null) {
 ## Get transaction by hash.
 
 ```
-Response<GetDepositByHashResult> response = 
-		client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111");
+    	Response<GetDepositByHashResult> response = 
+    			client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111", 0, 100);
 
-GetDepositByHashResult result = response.getResult();
-if(result != null) {
-	
-	// filter confirmed success transaction
-	Optional<TransferTransaction> deposit = result.getTransactions().stream().filter(
-			tx -> {
-				return tx.getStatus().equals(TransactionStatus.ConfirmedSuccess) && 
-						tx.getIsFee().equals(false);
-			}).findFirst();
-	
-	if(deposit.isPresent()) {
-		log.info("Deposit success txid {}", deposit.get().getTxHash());
-	}
-}
-
+    	GetDepositByHashResult result = response.getResult();
+    	if(result != null) {
+    		
+    		// filter confirmed success transaction
+    		List<TransferTransaction> successDepositList = result.getTransactions().stream().filter(
+    				tx -> {
+    					return Boolean.TRUE.equals(tx.getTxStatus()) && // only success transactions
+    							"80000001".equals(tx.getWalletName()) &&  // specify wallet name(client id)
+    							tx.getStatus().equals(TransactionStatus.ConfirmedSuccess); // in ConfirmedSucceess status.
+    				}).toList();
+    		
+    		// process success deposit records
+    		for(TransferTransaction deposit : successDepositList) {
+    			// the unique id of transaction
+    			String refNo = deposit.getRefNo();
+    			if(true/* this refNo not process before*/) {
+    				// process here
+    			}
+    		}
+    	}
 ```
 
 
