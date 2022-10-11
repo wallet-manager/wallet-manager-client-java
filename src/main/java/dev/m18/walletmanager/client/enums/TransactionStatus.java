@@ -4,10 +4,12 @@ import lombok.Getter;
 
 public enum TransactionStatus implements IntEnum{
 
+	FastConfirmedFail(-2),
     ConfirmedFail(-1),
     Unconfirmed(1),
     ConfirmedSuccess(2),
-    Invoid(3);
+    Invoid(3),
+	FastConfirmedSuccess(4);
 	
 	@Getter
 	private final int value; 
