@@ -2,8 +2,8 @@ package dev.m18.walletmanager.client;
 
 import java.math.BigInteger;
 import java.util.List;
-import java.util.Optional;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,10 +13,11 @@ import dev.m18.walletmanager.client.entities.BatchWithdrawRequest.WithdrawOrder;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByHashResult;
+import dev.m18.walletmanager.client.entities.GetDepositRequestOptions;
+import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
+import dev.m18.walletmanager.client.entities.Pagination;
 import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.entities.TransferTransaction;
 import dev.m18.walletmanager.client.enums.ChainType;
@@ -103,13 +104,17 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     @Test
     public void testGetDepositByAddress() {
 
-    	Response<GetDepositByAddressResult> response = client.getApi().getDepositByAddress(
+    	String addres = "0xaa2a674256017f7B71f8f7dF36041C5187D7B68E";
+    	String assetName = "UNI";
+    	
+    	GetDepositRequestOptions options = 
+    			GetDepositRequestOptions.builder().offset(0).limit(10).build();
+
+    	Response<GetDepositResult> response = client.getDepositByAddress(
 				ChainType.ETH.getIntVal(), 
 				ChainId.Rinkeby, 
-				"0xaa2a674256017f7B71f8f7dF36041C5187D7B68E", 
-				"UNI", 
-				0, 
-				10);
+				addres, assetName, 
+				options);
 		
     	log.info("Get Deposit by Address {}", response);
     	
@@ -118,36 +123,93 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     @Test
     public void testGetDepositByHash() {    
     	
-    	Response<GetDepositByHashResult> response = 
-    			client.getApi().getDepositByHash(
+    	String txHash = "0x5890c794096a98008f1e0d60feb93076169a1def754e4015971db8215e450ff1";
+    	
+    	GetDepositRequestOptions options = GetDepositRequestOptions.builder().offset(0).limit(10).build();
+    	
+    	Response<GetDepositResult> response = 
+    			client.getDepositByHash(
     					CHAIN_TYPE.getIntVal(), 
     					CHAIN_ID, 
-    					"0x5890c794096a98008f1e0d60feb93076169a1def754e4015971db8215e450ff1",
-    					0, 
-    					10);
-    	
-    	GetDepositByHashResult result = response.getResult();
-    	if(result != null) {
-    		
-    		// filter confirmed success transaction
-    		Optional<TransferTransaction> deposit = result.getTransactions().stream().filter(
-    				tx -> {
-    					// Success and not a fee transaction
-        				return TransactionStatus.ConfirmedSuccess.equals(tx.getStatus()) && 
-        						Boolean.FALSE.equals(tx.getIsFee());
-    				}).findFirst();
-    		
-    		if(deposit.isPresent()) {
-    			log.info("Depsit success txid {}", deposit.get().getTxHash());
-    		}
-    	}
+    					txHash,
+    					options);
+
+    	GetDepositResult result = response.getResult();
+		if (result != null) {
+
+			// filter confirmed success transaction
+			List<TransferTransaction> successDepositList = result.getTransactions().stream().filter(tx -> {
+				return Boolean.TRUE.equals(tx.getTxStatus()) && "80000001".equals(tx.getWalletName())
+						&& tx.getStatus().equals(TransactionStatus.ConfirmedSuccess);
+			}).toList();
+
+			// process success deposit records
+			for (TransferTransaction deposit : successDepositList) {
+				// the unique id of transaction
+				String refNo = deposit.getRefNo();
+				log.info("Process deposit refNo: {}", refNo);
+				if (true/* this refNo not process before */) {
+					// process here
+					log.info("Deposit: {}", deposit);
+				}
+			}
+		}
     	
     	log.info("Get Deposit by Hash {}", response);
     }
     
+    
+    @Test
+    public void testGetUniqueDepositByRefNo() {
+    	
+    	String refNo = "";
+    	String blockHash = "";
+    	Response<GetDepositResult> response = client.getUniqueDepositByRefNo(CHAIN_TYPE.getIntVal(), CHAIN_ID, refNo, blockHash);
+    	GetDepositResult result = response.getResult();
+    	if(result != null && result.getTransactions().size() > 0) {    		
+			
+    		// only one record
+			Assert.assertEquals(result.getTransactions().size(), 1);
+			
+			TransferTransaction deposit = result.getTransactions().get(0);
+			
+			log.info("Tx Status {}", deposit.getTxStatus());
+			log.info("Tranaction status {}", deposit.getStatus());
+			log.info("Deposit record {}", deposit);
+    	}
+    }
+    
+    
+    @Test
+    public void testSuccessGetDepositByRefNo() {
+    	
+    	String refNo = "";
+    	Response<GetDepositResult> response = client.getSuccessDepositByRefNo(CHAIN_TYPE.getIntVal(), CHAIN_ID, refNo);
+    	GetDepositResult result = response.getResult();
+		if(result != null && result.getTransactions().size() > 0) {
+			
+			// only one success record
+			Assert.assertEquals(result.getTransactions().size(), 1);
+
+			TransferTransaction deposit = result.getTransactions().get(0);
+			
+			Assert.assertTrue(deposit.getTxStatus());
+			log.info("Tx Status {}", deposit.getTxStatus());
+			
+			// either FastConfirmedSuccess or ConfirmSuccess
+			Assert.assertTrue(TransactionStatus.FastConfirmedSuccess.equals(deposit.getStatus()) || 
+					TransactionStatus.ConfirmedSuccess.equals(deposit.getStatus()));
+			log.info("Tranaction status {}", deposit.getStatus());
+			
+			log.info("Deposit record {}", deposit);
+		}
+    }
+    
+    
     @Test
     public void testGetWithdrawByOrderId() {
-    	Response<Operation> response = client.getApi().getWithdrawByOrderId("W1662104213630", 0, 10);
+    	String orderId = "W1662104213630";
+    	Response<Operation> response = client.getWithdrawByOrderId(orderId);
     	
     	Operation operation = response.getResult();
     	if(operation != null) {
@@ -162,7 +224,8 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     @Test
     public void testGetWithdrawByBatchId() {
     	Long batchId = 168L;
-    	Response<OperationBatch> response = client.getApi().getWithdrawByBatchId(batchId, 0, 10);
+    	Response<OperationBatch> response = client.getWithdrawByBatchId(batchId, 
+    			Pagination.builder().offset(0).limit(10).build());
     	
     	OperationBatch batch = response.getResult();
     	if(batch != null) {
@@ -174,8 +237,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     	}
     	
     	log.info("Get withdraw by batch Id {}", response);
-    }
-    
+    }   
     
 
 }

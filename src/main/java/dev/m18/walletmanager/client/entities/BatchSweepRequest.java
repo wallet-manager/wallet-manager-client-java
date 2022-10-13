@@ -4,7 +4,6 @@ import java.math.BigInteger;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.m18.walletmanager.client.enums.ChainType;
 import lombok.Data;
 
 @Data

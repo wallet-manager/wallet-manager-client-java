@@ -1,13 +1,14 @@
 package dev.m18.walletmanager.client.api;
 
+import java.util.Map;
+
 import dev.m18.walletmanager.client.entities.BatchSweepRequest;
 import dev.m18.walletmanager.client.entities.BatchSweepResult;
 import dev.m18.walletmanager.client.entities.BatchWithdrawRequest;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByHashResult;
+import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
 import dev.m18.walletmanager.client.entities.Response;
@@ -15,6 +16,7 @@ import dev.m18.walletmanager.client.utils.JacksonExpander;
 import feign.Body;
 import feign.Headers;
 import feign.Param;
+import feign.QueryMap;
 import feign.RequestLine;
 
 public interface WalletManagerApi extends WalletManagerServerApi{
@@ -46,7 +48,7 @@ public interface WalletManagerApi extends WalletManagerServerApi{
 	
 	@RequestLine("GET /{chain_type}/{chain_id}/transfer/addr/{address}/deposit/{asset_name}?offset={offset}&limit={limit}")
 	@Override
-	Response<GetDepositByAddressResult> getDepositByAddress(
+	Response<GetDepositResult> getDepositByAddress(
 			@Param(value = "chain_type")
 			Integer chainType,
 			@Param(value = "chain_id")
@@ -55,45 +57,49 @@ public interface WalletManagerApi extends WalletManagerServerApi{
 			String address,
 			@Param(value = "asset_name")
 			String assetName,
-			@Param(value = "offset")
-			Integer offset,
-			@Param(value = "limit")
-			Integer limit);
+			@QueryMap
+			Map<String, String> queryParameters);
 	
 	@RequestLine("GET /{chain_type}/{chain_id}/transfer/hash/{tx_hash}/deposit?offset={offset}&limit={limit}")
 	@Override
-	Response<GetDepositByHashResult> getDepositByHash(
+	Response<GetDepositResult> getDepositByHash(
 			@Param(value = "chain_type")
 			Integer chainType,
 			@Param(value = "chain_id")
 			Long chainId,
 			@Param(value = "tx_hash")
 			String txHash,
-			@Param(value = "offset")
-			Integer offset,
-			@Param(value = "limit")
-			Integer limit);
+			@QueryMap
+			Map<String, String> queryParameters);
+	
+	@RequestLine("GET /{chain_type}/{chain_id}/transfer/ref_no/{ref_no}/deposit")
+	@Override
+	Response<GetDepositResult> getDepositByRefNo(
+			@Param(value = "chain_type")
+			Integer chainType,
+			@Param(value = "chain_id")
+			Long chainId,
+			@Param(value = "ref_no")
+			String refNO,
+			@QueryMap
+			Map<String, String> queryParameters);
 	
 
-	@RequestLine("GET /withdraw/order/{merchant_order_id}?offset={offset}&limit={limit}")
+	@RequestLine("GET /withdraw/order/{merchant_order_id}")
 	@Override
 	Response<Operation> getWithdrawByOrderId(
 			@Param(value = "merchant_order_id")
 			String merchantOrderId,
-			@Param(value = "offset")
-			Integer offset,
-			@Param(value = "limit")
-			Integer limit);
+			@QueryMap
+			Map<String, String> queryParameters);
 	
-	@RequestLine("GET /withdraw/batch/{batch_id}?offset={offset}&limit={limit}")
+	@RequestLine("GET /withdraw/batch/{batch_id}")
 	@Override
 	Response<OperationBatch> getWithdrawByBatchId(
 			@Param(value = "batch_id")
 			Long batchId,
-			@Param(value = "offset")
-			Integer offset,
-			@Param(value = "limit")
-			Integer limit);
+			@QueryMap
+			Map<String, String> queryParameters);
 			
 	
 }

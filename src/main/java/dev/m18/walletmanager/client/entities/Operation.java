@@ -2,10 +2,12 @@ package dev.m18.walletmanager.client.entities;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import dev.m18.walletmanager.client.enums.OperationStatus;
+import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import lombok.Data;
 
@@ -54,4 +56,30 @@ public class Operation {
 	@JsonProperty("last_modified_date")
 	Date lastModifiedDate;
 
+	
+	List<Transaction> transactions;
+	
+	
+	@Data
+	public static class Transaction {
+
+		@JsonProperty("block_number")
+		Long blockNumber;
+
+		@JsonProperty("block_hash")
+		String blockHash;
+
+		@JsonProperty("block_time")
+		Long blockTime;
+		
+		@JsonProperty("tx_status")
+		Boolean txStatus;
+
+		@JsonProperty("tx_hash")
+		String txHash;
+
+		OperationTransactionStatus status;
+
+		String remarks;
+	}
 }

@@ -1,17 +1,17 @@
 package dev.m18.walletmanager.client.api;
 
+import java.util.Map;
+
 import dev.m18.walletmanager.client.entities.BatchSweepRequest;
 import dev.m18.walletmanager.client.entities.BatchSweepResult;
 import dev.m18.walletmanager.client.entities.BatchWithdrawRequest;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositByHashResult;
+import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
 import dev.m18.walletmanager.client.entities.Response;
-import feign.Param;
 
 public interface WalletManagerServerApi {
 
@@ -45,13 +45,12 @@ public interface WalletManagerServerApi {
 	 * `/${chain_type}/${chain_id}/transfer/addr/${address}/deposit/${asset_name}`
 	 * @return
 	 */
-	Response<GetDepositByAddressResult> getDepositByAddress(
+	Response<GetDepositResult> getDepositByAddress(
 			Integer chainType,
 			Long chainId,
 			String address,
 			String assetName,
-			Integer offset,
-			Integer limit);
+			Map<String, String> queryParameters);
 	
 	/**
 	 * Get deposit by tx hash. 
@@ -62,12 +61,26 @@ public interface WalletManagerServerApi {
 	 * `/${chain_type}/${chain_id}/transfer/hash/${tx_hash}/deposit`
 	 * @return
 	 */
-	Response<GetDepositByHashResult> getDepositByHash(
+	Response<GetDepositResult> getDepositByHash(
 			Integer chainType,
 			Long chainId,
 			String txHash,
-			Integer offset,
-			Integer limit);
+			Map<String, String> queryParameters);
+	
+	/**
+	 * Get deposit by Ref No. 
+	 * Confirmed success transaction by
+	 * {@link dev.m18.walletmanager.client.entities.TransferTransaction#getStatus()} is
+	 * {@link dev.m18.walletmanager.client.enums.TransactionStatus#ConfirmedSuccess}
+	 * 
+	 * `/${chain_type}/${chain_id}/transfer/ref_no/${ref_no}/deposit`
+	 * @return
+	 */
+	Response<GetDepositResult> getDepositByRefNo(
+			Integer chainType,
+			Long chainId,
+			String refNo,
+			Map<String, String> queryParameters);
 	
 	/**
 	 * Get withdraw by merchant order id
@@ -76,8 +89,7 @@ public interface WalletManagerServerApi {
 	 */
 	Response<Operation> getWithdrawByOrderId(
 			String merchantOrderId,
-			Integer offset,
-			Integer limit);
+			Map<String, String> queryParameters);
 	
 	/**
 	 * Get withdraw by operation batch ID returned in {@link #batchWithdraw(BatchWithdrawRequest)}
@@ -86,7 +98,6 @@ public interface WalletManagerServerApi {
 	 */
 	Response<OperationBatch> getWithdrawByBatchId(
 			Long batchId,
-			Integer offset,
-			Integer limit);
+			Map<String, String> queryParameters);
 	
 }

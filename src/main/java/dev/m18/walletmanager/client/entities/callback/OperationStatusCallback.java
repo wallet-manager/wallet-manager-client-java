@@ -102,13 +102,16 @@ public class OperationStatusCallback implements Callback {
 
 			@JsonProperty("block_time")
 			Long blockTime;
+			
+			@JsonProperty("tx_status")
+			Boolean txStatus;
 
 			@JsonProperty("tx_hash")
 			String txHash;
 
 			OperationTransactionStatus status;
 
-			String remark;
+			String remarks;
 		}
 
 	}

@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.OperationBatchStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import lombok.Data;
