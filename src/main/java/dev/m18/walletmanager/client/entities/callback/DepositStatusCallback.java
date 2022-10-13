@@ -70,7 +70,7 @@ public class DepositStatusCallback implements Callback{
 		Date updatedTime;
 
 		@JsonProperty("block_number")
-		Date blockNumber;
+		Long blockNumber;
 
 		@JsonProperty("block_hash")
 		String blockHash;
