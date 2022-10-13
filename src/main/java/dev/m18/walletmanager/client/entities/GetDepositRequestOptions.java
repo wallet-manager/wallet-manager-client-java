@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 @Builder
 @Data
 @EqualsAndHashCode(callSuper=false)
-public class GetDepositRequestOptions{
+public class GetDepositRequestOptions implements Pagination{
 
 	String blockHash; 
 	Boolean txStatus; 

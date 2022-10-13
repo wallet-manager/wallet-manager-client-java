@@ -17,7 +17,7 @@ import dev.m18.walletmanager.client.entities.GetDepositRequestOptions;
 import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
-import dev.m18.walletmanager.client.entities.Pagination;
+import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
 import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.entities.TransferTransaction;
 import dev.m18.walletmanager.client.enums.ChainType;
@@ -225,7 +225,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     public void testGetWithdrawByBatchId() {
     	Long batchId = 168L;
     	Response<OperationBatch> response = client.getWithdrawByBatchId(batchId, 
-    			Pagination.builder().offset(0).limit(10).build());
+    			GetWithdrawRequestOptions.builder().offset(0).limit(10).build());
     	
     	OperationBatch batch = response.getResult();
     	if(batch != null) {

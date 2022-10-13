@@ -18,7 +18,7 @@ import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.GetDepositRequestOptions;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
-import dev.m18.walletmanager.client.entities.Pagination;
+import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
 import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.utils.WalletManagerUtils;
 import feign.Logger;
@@ -91,13 +91,13 @@ public class WalletManagerClient implements WalletManagerServerApi{
 		return queryParameters;
 	}
 	
-	private Map<String, String>  convertPagination(Pagination pagination){
+	private Map<String, String>  convertGetWithdrawRequestOptions(GetWithdrawRequestOptions options){
 		Map<String, String> queryParameters = new HashMap<>();
-		if(pagination != null) {
+		if(options != null) {
 			// add offset
-			Optional.ofNullable(pagination.getOffset()).ifPresent(e -> queryParameters.put("offset", e.toString()));
+			Optional.ofNullable(options.getOffset()).ifPresent(e -> queryParameters.put("offset", e.toString()));
 			// add limit
-			Optional.ofNullable(pagination.getLimit()).ifPresent(e -> queryParameters.put("limit", e.toString()));			
+			Optional.ofNullable(options.getLimit()).ifPresent(e -> queryParameters.put("limit", e.toString()));			
 		}
 		return queryParameters;
 	}
@@ -199,12 +199,12 @@ public class WalletManagerClient implements WalletManagerServerApi{
 	/**
 	 * Get withdraw by order ID
 	 * @param merchantOrderId
-	 * @param pagination
+	 * @param options
 	 * @return
 	 */
-	private Response<Operation> getWithdrawByOrderId(String merchantOrderId, Pagination pagination) {
+	private Response<Operation> getWithdrawByOrderId(String merchantOrderId, GetWithdrawRequestOptions options) {
 		// convert options
-		Map<String, String> queryParameters = convertPagination(pagination);
+		Map<String, String> queryParameters = convertGetWithdrawRequestOptions(options);
 		// query
 		return this.getApi().getWithdrawByOrderId(merchantOrderId, queryParameters);
 	}
@@ -215,7 +215,7 @@ public class WalletManagerClient implements WalletManagerServerApi{
 	 * @return
 	 */
 	public Response<Operation> getWithdrawByOrderId(String merchantOrderId) {
-		Pagination pagination = Pagination.builder().offset(0).limit(20).build();
+		GetWithdrawRequestOptions pagination = GetWithdrawRequestOptions.builder().offset(0).limit(20).build();
 		// should only one record returned.
 		return this.getWithdrawByOrderId(merchantOrderId, pagination);
 	}
@@ -228,12 +228,12 @@ public class WalletManagerClient implements WalletManagerServerApi{
 	/**
 	 * Get withdraw by batch ID.
 	 * @param batchId
-	 * @param pagination
+	 * @param options
 	 * @return
 	 */
-	public Response<OperationBatch> getWithdrawByBatchId(Long batchId, Pagination pagination) {
+	public Response<OperationBatch> getWithdrawByBatchId(Long batchId, GetWithdrawRequestOptions options) {
 		// convert options
-		Map<String, String> queryParameters = convertPagination(pagination);
+		Map<String, String> queryParameters = convertGetWithdrawRequestOptions(options);
 		// query
 		return this.getApi().getWithdrawByBatchId(batchId, queryParameters);
 	}

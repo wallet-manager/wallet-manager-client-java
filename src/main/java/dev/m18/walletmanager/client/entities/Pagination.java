@@ -1,13 +1,8 @@
 package dev.m18.walletmanager.client.entities;
 
-import lombok.Builder;
-import lombok.Data;
-
-@Builder
-@Data
-public class Pagination {
+public interface Pagination {
 	
-	Integer offset;
-	Integer limit;
+	Integer getOffset();
+	Integer getLimit();
 
 }
