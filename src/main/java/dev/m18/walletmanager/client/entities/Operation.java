@@ -70,7 +70,7 @@ public class Operation {
 		String blockHash;
 
 		@JsonProperty("block_time")
-		Long blockTime;
+		Date blockTime;
 		
 		@JsonProperty("tx_status")
 		Boolean txStatus;
