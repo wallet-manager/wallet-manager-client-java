@@ -3,6 +3,7 @@ package dev.m18.walletmanager.client.entities.callback;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
+import dev.m18.walletmanager.client.entities.callback.BlockNumberCallback.BlockNumberCallbackData;
 import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback.DepositStatusCallbackData;
 import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback.OperationBatchStatusCallbackData;
 import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback.OperationStatusCallbackData;
@@ -84,5 +85,23 @@ public class MerchantCallback implements Callback {
 			throw new RuntimeException("Callback type not match");
 		}
 	}
+	
+	public boolean isBlockNumberCallback() {
+		return this.getType().equals(BlockNumberCallback.BLOCK_NUMBER);
+	}
+	
+	public BlockNumberCallback toBlockNumberCallback() throws JsonProcessingException {
+		if (this.isBlockNumberCallback()) {
+			BlockNumberCallback callback = new BlockNumberCallback();
+			BlockNumberCallbackData data = ObjectMapperUtils.getObjectMapper().treeToValue(this.getData(),
+					BlockNumberCallbackData.class);
+			callback.setData(data);
+			return callback;
+		} else {
+			throw new RuntimeException("Callback type not match");
+		}
+	}
 
+	
+	
 }

@@ -14,11 +14,13 @@ import dev.m18.walletmanager.client.entities.BatchWithdrawRequest;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
-import dev.m18.walletmanager.client.entities.GetDepositResult;
+import dev.m18.walletmanager.client.entities.GetAllLatestBlocksOptions;
+import dev.m18.walletmanager.client.entities.GetAllLatestBlocksResponse;
 import dev.m18.walletmanager.client.entities.GetDepositRequestOptions;
+import dev.m18.walletmanager.client.entities.GetDepositResult;
+import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
-import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
 import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.utils.WalletManagerUtils;
 import feign.Logger;
@@ -237,6 +239,35 @@ public class WalletManagerClient implements WalletManagerServerApi{
 		// query
 		return this.getApi().getWithdrawByBatchId(batchId, queryParameters);
 	}
+
+	
+	private Map<String, String>  convertGetAllLatestBlocksOptions(GetAllLatestBlocksOptions options){
+		Map<String, String> queryParameters = new HashMap<>();
+		if(options != null) {
+			// chain type
+			Optional.ofNullable(options.getChainId()).ifPresent(e -> queryParameters.put("chain_id", e.toString()));
+			// chain id
+			Optional.ofNullable(options.getChainType()).ifPresent(e -> queryParameters.put("chain_type", e.getIntVal().toString()));		
+		}
+		return queryParameters;
+	}
+	
+	@Override
+	public Response<GetAllLatestBlocksResponse> getAllLatestBlocks(Map<String, String> queryParameters) {
+		return this.getApi().getAllLatestBlocks(queryParameters);
+	}
+	
+	public Response<GetAllLatestBlocksResponse> getAllLatestBlocks() {
+		return this.getAllLatestBlocks((GetAllLatestBlocksOptions)null);
+	}
+	
+	public Response<GetAllLatestBlocksResponse> getAllLatestBlocks(GetAllLatestBlocksOptions options) {
+		// convert options
+		Map<String, String> queryParameters = convertGetAllLatestBlocksOptions(options);
+		// query
+		return this.getApi().getAllLatestBlocks(queryParameters);
+	}
+	
 	
 	
 }

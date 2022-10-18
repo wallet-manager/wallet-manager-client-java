@@ -6,7 +6,9 @@ public enum ChainType implements IntEnum{
 
     BTC(1),
     ETH(2),
-    TRON(3);
+    TRON(3),
+	XRP(4),
+	SOLANA(5);
 	
 	@Getter
 	private final int value; 

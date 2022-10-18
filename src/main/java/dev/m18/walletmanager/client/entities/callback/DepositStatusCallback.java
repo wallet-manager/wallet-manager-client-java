@@ -5,7 +5,6 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -8,6 +8,7 @@ import dev.m18.walletmanager.client.entities.BatchWithdrawRequest;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
+import dev.m18.walletmanager.client.entities.GetAllLatestBlocksResponse;
 import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
@@ -101,5 +102,11 @@ public interface WalletManagerApi extends WalletManagerServerApi{
 			@QueryMap
 			Map<String, String> queryParameters);
 			
+	
+	@RequestLine("GET /chains/get_all_latest_blocks")
+	@Override
+	Response<GetAllLatestBlocksResponse> getAllLatestBlocks(
+			@QueryMap
+			Map<String, String> queryParameters);
 	
 }

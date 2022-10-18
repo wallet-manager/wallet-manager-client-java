@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import dev.m18.walletmanager.client.entities.Response;
+import dev.m18.walletmanager.client.entities.callback.BlockNumberCallback;
 import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.MerchantCallback;
 import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback;
@@ -165,5 +166,29 @@ public class TestWalletManagerCallback {
     	VerifyWithdrawCallback verifyWithdrawCallback = callback.toVerifyWithdrawCallback();
 		log.info("Verify withdraw callback {}", verifyWithdrawCallback);
     }
-	
+    
+    
+    @Test
+    public void verifyBlockNumberCallback() throws JsonMappingException, JsonProcessingException {
+    	String json = "{\n"
+    			+ "   \"type\":\"block_number\",\n"
+    			+ "   \"data\":{\n"
+    			+ "      \"chain_type\":3,\n"
+    			+ "      \"chain_id\":1,\n"
+    			+ "      \"block_number\":\"44858902\",\n"
+    			+ "      \"hash\":\"0000000002ac7e1629d809b3b94ea102f4439d3ed994b688a9748202639a443f\",\n"
+    			+ "      \"time\":1665156930,\n"
+    			+ "      \"confirmations\":1,\n"
+    			+ "      \"confirmed\":false\n"
+    			+ "   }\n"
+    			+ "}";
+
+
+    	
+    	MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(json);
+    	
+    	Assert.assertTrue("is verify withdraw callback", callback.isBlockNumberCallback());	
+    	BlockNumberCallback blockNumberCallback = callback.toBlockNumberCallback();
+		log.info("Block number callback {}", blockNumberCallback);
+    }
 }

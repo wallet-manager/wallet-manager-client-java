@@ -13,11 +13,13 @@ import dev.m18.walletmanager.client.entities.BatchWithdrawRequest.WithdrawOrder;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
+import dev.m18.walletmanager.client.entities.GetAllLatestBlocksResponse;
 import dev.m18.walletmanager.client.entities.GetDepositRequestOptions;
 import dev.m18.walletmanager.client.entities.GetDepositResult;
+import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
+import dev.m18.walletmanager.client.entities.LatestBlock;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
-import dev.m18.walletmanager.client.entities.GetWithdrawRequestOptions;
 import dev.m18.walletmanager.client.entities.Response;
 import dev.m18.walletmanager.client.entities.TransferTransaction;
 import dev.m18.walletmanager.client.enums.ChainType;
@@ -239,5 +241,19 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     	log.info("Get withdraw by batch Id {}", response);
     }   
     
+    @Test
+    public void testGetAllLatestBlocks() {
+    	Response<GetAllLatestBlocksResponse> result = client.getAllLatestBlocks();
+    	
+    	GetAllLatestBlocksResponse response = result.getResult();
+    	
+    	Assert.assertTrue(response.size() > 1);
+    	
+    	for(LatestBlock block : response) {
+    		Assert.assertTrue(block.getLatesPendingBlockNumber() >= block.getLatestBlockNumber());	
+    	}
+    	
+    	log.info("Get withdraw by batch Id {}", response);
+    }
 
 }

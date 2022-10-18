@@ -8,10 +8,12 @@ import dev.m18.walletmanager.client.entities.BatchWithdrawRequest;
 import dev.m18.walletmanager.client.entities.BatchWithdrawResult;
 import dev.m18.walletmanager.client.entities.GetAddressRequest;
 import dev.m18.walletmanager.client.entities.GetAddressResult;
+import dev.m18.walletmanager.client.entities.GetAllLatestBlocksResponse;
 import dev.m18.walletmanager.client.entities.GetDepositResult;
 import dev.m18.walletmanager.client.entities.Operation;
 import dev.m18.walletmanager.client.entities.OperationBatch;
 import dev.m18.walletmanager.client.entities.Response;
+import feign.QueryMap;
 
 public interface WalletManagerServerApi {
 
@@ -98,6 +100,16 @@ public interface WalletManagerServerApi {
 	 */
 	Response<OperationBatch> getWithdrawByBatchId(
 			Long batchId,
+			Map<String, String> queryParameters);
+	
+	/**
+	 * Get latest blocks
+	 * `/chain/get_all_latest_blocks`
+	 * @param queryParameters
+	 * @return
+	 */
+	Response<GetAllLatestBlocksResponse> getAllLatestBlocks(
+			@QueryMap
 			Map<String, String> queryParameters);
 	
 }

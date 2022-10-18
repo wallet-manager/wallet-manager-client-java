@@ -1,14 +1,10 @@
 package dev.m18.walletmanager.client.entities.callback;
 
 import java.math.BigInteger;
-import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.m18.walletmanager.client.entities.OperationBatch;
-import dev.m18.walletmanager.client.enums.ChainType;
-import dev.m18.walletmanager.client.enums.OperationStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

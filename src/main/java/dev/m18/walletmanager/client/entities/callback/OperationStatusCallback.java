@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import dev.m18.walletmanager.client.enums.ChainType;
 import dev.m18.walletmanager.client.enums.OperationStatus;
 import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
