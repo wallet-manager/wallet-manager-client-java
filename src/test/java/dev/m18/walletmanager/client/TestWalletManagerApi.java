@@ -162,8 +162,8 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     @Test
     public void testGetUniqueDepositByRefNo() {
     	
-    	String refNo = "";
-    	String blockHash = "";
+    	String refNo = "ROX6TM563AL4ZAB7HUKU7VT7IA2EZODWMBLI46CZJ7QDM2XOIPWA";
+    	String blockHash = "0x3dd2555ccf211656e21705a584d53d0b7e63b50c5e6d61b3eec7618bd1467eae";
     	Response<GetDepositResult> response = client.getUniqueDepositByRefNo(CHAIN_TYPE.getIntVal(), CHAIN_ID, refNo, blockHash);
     	GetDepositResult result = response.getResult();
     	if(result != null && result.getTransactions().size() > 0) {    		
@@ -183,7 +183,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     @Test
     public void testSuccessGetDepositByRefNo() {
     	
-    	String refNo = "";
+    	String refNo = "ROX6TM563AL4ZAB7HUKU7VT7IA2EZODWMBLI46CZJ7QDM2XOIPWA";
     	Response<GetDepositResult> response = client.getSuccessDepositByRefNo(CHAIN_TYPE.getIntVal(), CHAIN_ID, refNo);
     	GetDepositResult result = response.getResult();
 		if(result != null && result.getTransactions().size() > 0) {

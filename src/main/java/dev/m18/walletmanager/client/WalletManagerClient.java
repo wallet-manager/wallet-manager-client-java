@@ -78,11 +78,11 @@ public class WalletManagerClient implements WalletManagerServerApi{
 		Map<String, String> queryParameters = new HashMap<>();
 		if(options != null) {
 			// block hash
-			Optional.ofNullable(options.getBlockHash()).ifPresent(e -> queryParameters.put("blockHash", e.toString()));
+			Optional.ofNullable(options.getBlockHash()).ifPresent(e -> queryParameters.put("block_hash", e.toString()));
 			// tx status
-			Optional.ofNullable(options.getTxStatus()).ifPresent(e -> queryParameters.put("txStatus", e.toString()));
+			Optional.ofNullable(options.getTxStatus()).ifPresent(e -> queryParameters.put("tx_status", e.toString()));
 			// only valid
-			Optional.ofNullable(options.getOnlyValid()).ifPresent(e -> queryParameters.put("onlyValid", e.toString()));
+			Optional.ofNullable(options.getValid()).ifPresent(e -> queryParameters.put("valid", e.toString()));
 			// add offset
 			Optional.ofNullable(options.getOffset()).ifPresent(e -> queryParameters.put("offset", e.toString()));
 			// add limit
@@ -187,7 +187,7 @@ public class WalletManagerClient implements WalletManagerServerApi{
 	 * @return
 	 */
 	public Response<GetDepositResult> getSuccessDepositByRefNo(Integer chainType, Long chainId, String refNo) {
-		GetDepositRequestOptions options = GetDepositRequestOptions.builder().txStatus(true).onlyValid(true).build();
+		GetDepositRequestOptions options = GetDepositRequestOptions.builder().txStatus(true).valid(true).build();
 		return this.getDepositByRefNo(chainType, chainId, refNo, options);
 	}
 	

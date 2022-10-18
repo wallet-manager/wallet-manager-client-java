@@ -11,7 +11,7 @@ public class GetDepositRequestOptions implements Pagination{
 
 	String blockHash; 
 	Boolean txStatus; 
-	Boolean onlyValid; 
+	Boolean	valid; 
 	Integer offset;
 	Integer limit;
 	
