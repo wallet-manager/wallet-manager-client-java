@@ -188,11 +188,11 @@ public class WalletManagerUtils {
 		System.arraycopy(signature.getS(), 0, signatureBytes, 32, 32);
 		System.arraycopy(signature.getV(), 0, signatureBytes, 64, 1);
 
-		return add0x(Hex.encodeHexString(signatureBytes, true));
+		return add0x(Hex.encodeHexString(signatureBytes).toLowerCase());
 	}
 
 	public static SignatureData signature(String signature) throws DecoderException {
-		byte[] signatureBytes = Hex.decodeHex(remove0x(signature));
+		byte[] signatureBytes = Hex.decodeHex(remove0x(signature).toCharArray());
 
 		byte[] r = new byte[32];
 		byte[] s = new byte[32];
