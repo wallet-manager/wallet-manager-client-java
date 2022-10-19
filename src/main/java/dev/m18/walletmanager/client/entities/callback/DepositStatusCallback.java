@@ -76,12 +76,21 @@ public class DepositStatusCallback implements Callback{
 
 		@JsonProperty("block_time")
 		Date blockTime;
+		
+		@JsonProperty("tx_status")
+		Boolean txStatus;
 
 		@JsonProperty("tx_hash")
 		String txHash;
+
+		@JsonProperty("ref_no")
+		String refNo;
+		
+		@JsonProperty("client_tag")
+		String clientTag;
+		
+		@JsonProperty("wallet_tag")
+		String walletTag;
 	}
-
-
-	
 	
 }
