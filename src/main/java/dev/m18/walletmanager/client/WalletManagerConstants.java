@@ -20,6 +20,8 @@ public class WalletManagerConstants {
         public static final Long Rinkeby = 4L;
         public static final Long BSC = 56L;
         public static final Long BSCT = 97L;
+        public static final Long Polygon = 137L;
+        public static final Long Mumbai = 80001L;
         public static final Long Sepolia = 11155111L;
     	
     }

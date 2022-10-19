@@ -36,7 +36,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
 	long clientSeq = System.currentTimeMillis();
 
 	private static ChainType CHAIN_TYPE = ChainType.ETH;
-	private static Long CHAIN_ID = ChainId.Rinkeby;
+	private static Long CHAIN_ID = ChainId.Sepolia;
 	
     @Before
     @Override
