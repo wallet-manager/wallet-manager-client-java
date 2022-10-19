@@ -32,13 +32,13 @@ public class BlockNumberCallback implements Callback {
 	public static class BlockNumberCallbackData {
 
 		@JsonProperty("chain_type")
-		ChainType chain_type;
+		ChainType chainType;
 
 		@JsonProperty("chain_id")
-		Long chain_id;
+		Long chainId;
 
 		@JsonProperty("block_number")
-		Long block_number;
+		Long blockNumber;
 
 		String hash;
 

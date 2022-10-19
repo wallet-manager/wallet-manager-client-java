@@ -57,11 +57,11 @@ public class Operation {
 	Date lastModifiedDate;
 
 	
-	List<Transaction> transactions;
+	List<OperationTransaction> transactions;
 	
 	
 	@Data
-	public static class Transaction {
+	public static class OperationTransaction {
 
 		@JsonProperty("block_number")
 		Long blockNumber;
