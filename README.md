@@ -1,4 +1,29 @@
 
+# API documents
+
+## API Format
+Request and response formats of API.
+
+[WM-API Format.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-API%20Format.pdf)
+
+## Merchant APIs
+The APIs implemented at merchant side used to be called back by Wallet Manager.
+
+[WM-Merchant APIs.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Merchant%20APIs.pdf)
+
+## Wallet manager APIs
+The APIs private by Wallet Manager.
+
+[WM-Wallet Manager APIs.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Wallet%20Manager%20APIs.pdf)
+
+## Appendix (Enum and constants)
+
+[WM-Appendix.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Appendix.pdf)
+
+## Support chain list
+
+[WM-Chain List.pdf](wallet-manager-client-java/docs/WM-Chain List.pdf)
+
 
 # Utilities and Client
 
