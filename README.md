@@ -22,7 +22,7 @@ The APIs private by Wallet Manager.
 
 ## Support chain list
 
-[WM-Chain List.pdf](wallet-manager-client-java/docs/WM-Chain List.pdf)
+[WM-Chain List.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Chain List.pdf)
 
 
 # Utilities and Client
@@ -72,11 +72,11 @@ Signature and related information are store in a Header object.
 | Name        | Description                | HTTP Header          | 
 | ----------- | -------------------------- |----------------------|
 | address     | Address assigned to server | X-Message-Address    |
-| timestamp   |  Time stamp of the message | X-Message-Timestamp  |
-| session     | Session ID (Snowflake ID)  |  X-Message-Sessio    |
+| timestamp   | Time stamp of the message  | X-Message-Timestamp  |
+| session     | Session ID (Snowflake ID)  | X-Message-Sessio     |
 | sequence    | Session ID (Snowflake ID)  | X-Message-Sequence   |
 | signature   | ECDSA_Sign(HSA265(Timestamp#Session#Sequence#BODY)) <br/> Using secp256k1 curve|X-Message-Signature |
-
+Ï
 
 ```
 public class Header {
