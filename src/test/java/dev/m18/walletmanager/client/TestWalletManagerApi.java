@@ -183,7 +183,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     
     
     @Test
-    public void testSuccessGetDepositByRefNo() {
+    public void testGetSuccessDepositByRefNo() {
     	
     	String refNo = "ROX6TM563AL4ZAB7HUKU7VT7IA2EZODWMBLI46CZJ7QDM2XOIPWA";
     	Response<GetDepositResult> response = client.getSuccessDepositByRefNo(CHAIN_TYPE.getIntVal(), CHAIN_ID, refNo);
@@ -210,7 +210,7 @@ public class TestWalletManagerApi extends ConfigUnitTest{
     
     @Test
     public void testGetWithdrawByOrderId() {
-    	String orderId = "W1665124395593";
+    	String orderId = "W1666153192944";
     	Response<Operation> response = client.getWithdrawByOrderId(orderId);
     	
     	Operation operation = response.getResult();
