@@ -88,6 +88,9 @@ public class TransferTransaction {
 	Date creatdDate;
 	
 	@JsonProperty("post_balance")
-	Long postBalance;
+	BigInteger postBalance;
+	
+	@JsonProperty("decimal")
+	Integer decimal; 
 
 }
