@@ -2,6 +2,7 @@ package dev.m18.walletmanager.client.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import dev.m18.walletmanager.client.enums.WalletType;
 import lombok.Data;
 
 @Data
@@ -18,5 +19,11 @@ public class GetAddressRequest {
     
     @JsonProperty("client_id")
     String clientId;
-	
+    
+    @JsonProperty("wallet_name")
+    String walletName;
+    
+    @JsonProperty("wallet_type")
+    WalletType walletType;
+    
 }

@@ -28,6 +28,7 @@ import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import dev.m18.walletmanager.client.enums.TransactionType;
+import dev.m18.walletmanager.client.enums.WalletType;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -220,6 +221,16 @@ public class ObjectMapperUtils {
 				public TransactionType deserialize(JsonParser p, DeserializationContext ctxt)
 						throws IOException, JsonProcessingException {
 					return TransactionType.getByValue(p.getValueAsInt());
+				}
+			});
+			
+			// WalletType
+			module.addDeserializer(WalletType.class, new JsonDeserializer<WalletType>() {
+
+				@Override
+				public WalletType deserialize(JsonParser p, DeserializationContext ctxt)
+						throws IOException, JsonProcessingException {
+					return WalletType.getByValue(p.getValueAsInt());
 				}
 			});
 			

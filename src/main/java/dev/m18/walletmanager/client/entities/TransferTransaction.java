@@ -40,8 +40,8 @@ public class TransferTransaction {
 	@JsonProperty("wallet_tag")
 	String walletTag;
 	
-	@JsonProperty("client_tag")
-	String clientTag;
+	@JsonProperty("client_id")
+	String clientId;
 	
 	@JsonProperty("ref_no")
 	String refNo;
@@ -76,6 +76,9 @@ public class TransferTransaction {
 	
 	@JsonProperty("to_address")
 	String toAddress;
+	
+	@JsonProperty("to_wallet_tag")
+	String toWalletTag;
 	
 	Integer confirmations;
 	
