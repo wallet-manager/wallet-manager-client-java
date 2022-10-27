@@ -22,7 +22,7 @@ The APIs private by Wallet Manager.
 
 ## Support chain list
 
-[WM-Chain List.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Chain List.pdf)
+[WM-Chain List.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Chain%20List.pdf)
 
 
 # Utilities and Client
