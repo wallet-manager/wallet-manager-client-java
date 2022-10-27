@@ -40,6 +40,9 @@ public class BatchWithdrawRequest {
 	    
 	    @JsonProperty("to_address")
 	    String toAddress;
+	    
+	    @JsonProperty("to_wallet_tag")
+	    String toWalletTag;
 	}
 }
 
