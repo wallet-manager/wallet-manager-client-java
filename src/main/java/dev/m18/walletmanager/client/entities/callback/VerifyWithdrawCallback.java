@@ -94,6 +94,9 @@ public class VerifyWithdrawCallback implements Callback{
 	    	
 	    	@JsonProperty("to_address")
 	    	String toAddresss;
+	    	
+	    	@JsonProperty("to_wallet_tag")
+	    	String toWalletTag;
 
 	    	@JsonProperty("request_time")
 	    	Long requestTime;
