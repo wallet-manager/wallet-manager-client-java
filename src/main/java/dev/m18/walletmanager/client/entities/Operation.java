@@ -45,6 +45,8 @@ public class Operation {
 	
 	BigDecimal amount;
 	
+	Integer decimals;
+	
 	@JsonProperty("asset_name")
 	String assetName;
 	
