@@ -5,6 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -22,10 +24,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 import dev.m18.walletmanager.client.entities.Header;
 import dev.m18.walletmanager.client.entities.Identity;
-import dev.m18.walletmanager.client.entities.callback.DepositStatusCallback;
 import dev.m18.walletmanager.client.entities.callback.MerchantCallback;
-import dev.m18.walletmanager.client.entities.callback.OperationBatchStatusCallback.OperationBatchStatusCallbackData;
-import dev.m18.walletmanager.client.entities.callback.OperationStatusCallback;
 import dev.m18.walletmanager.client.enums.VerifyResult;
 import lombok.extern.slf4j.Slf4j;
 
@@ -96,30 +95,53 @@ public class WalletManagerUtils {
 		if(!whiteListedAddresses.contains(header.getAddress())) {
 			return VerifyResult.InvalidAddress;
 		}
+		
+		long now = System.currentTimeMillis();
+		if (header.getTimestamp() < now - expiredInMs) {
+			return VerifyResult.Expired;
+		}
 
 		String content = contentToBeSigned(header, body);
 
 		byte[] messageHash = sha256(content);
+		
+		String signature = header.getSignature();
+        if(!signature.startsWith("0x")){
+            signature = "0x" + signature;
+        }
+		
+		
 
 		try {
-			SignatureData signature = signature(header.getSignature());
-
 			log.debug("Sign message content {}", content);
 			log.debug("Verfiy message hash {}", Hex.encodeHexString(messageHash));
-			log.debug("Signagure V {}", Hex.encodeHexString(signature.getV()));
-			log.debug("Signature R {}", Hex.encodeHexString(signature.getR()));
-			log.debug("Signature S {}", Hex.encodeHexString(signature.getS()));
 
-			BigInteger publicKey = Sign.signedMessageHashToKey(messageHash, signature);
-
-			String address = getAddressFromPublicKey(publicKey);
-
-			long now = System.currentTimeMillis();
-			if (header.getTimestamp() < now - expiredInMs) {
-				return VerifyResult.Expired;
+			List<SignatureData> signatures = new ArrayList<>();
+			if (signature.length() == 130) {
+				SignatureData signatureData27 = signature(signature + "1b");  // v = 27
+				SignatureData signatureData28 = signature(signature + "1c");  // v = 28
+				signatures.add(signatureData27);
+				signatures.add(signatureData28);
+				log.debug("Signagure V {}", Hex.encodeHexString(signatureData27.getV()));
+				log.debug("Signature R {}", Hex.encodeHexString(signatureData27.getR()));
+			} else {
+				SignatureData signatureData = signature(signature);
+				signatures.add(signatureData);
+				log.debug("Signagure V {}", Hex.encodeHexString(signatureData.getV()));
+				log.debug("Signature R {}", Hex.encodeHexString(signatureData.getR()));
+				log.debug("Signature S {}", Hex.encodeHexString(signatureData.getS()));
 			}
 
-			if (address.equals(header.getAddress())) {
+			boolean match = false;
+			for(SignatureData s : signatures) {
+				BigInteger publicKey = Sign.signedMessageHashToKey(messageHash, s);
+				String address = getAddressFromPublicKey(publicKey);
+				if (address.equals(header.getAddress())) {
+					match = true;
+				}
+			}
+
+			if (match) {
 				return VerifyResult.Verified;
 			} else {
 				return VerifyResult.SignatureNotMatch;
@@ -199,7 +221,9 @@ public class WalletManagerUtils {
 		byte[] v = new byte[1];
 		System.arraycopy(signatureBytes, 0, r, 0, 32);
 		System.arraycopy(signatureBytes, 32, s, 0, 32);
-		System.arraycopy(signatureBytes, 64, v, 0, 1);
+		if(signatureBytes.length > 64) {
+			System.arraycopy(signatureBytes, 64, v, 0, 1);
+		}
 		return new SignatureData(v, r, s);
 	}
 	
