@@ -93,7 +93,6 @@ public class TransferTransaction {
 	@JsonProperty("post_balance")
 	BigInteger postBalance;
 	
-	@JsonProperty("decimal")
-	Integer decimal; 
+	Integer decimals; 
 
 }
