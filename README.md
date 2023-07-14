@@ -329,60 +329,60 @@ if(result != null) {
 
 ## Get deposit successful transaction by refNo.
 ```
-		String refNo = "ROX6TM563AL4ZAB7HUKU7VT7IA2EZODWMBLI46CZJ7QDM2XOIPWA";
-		Response<GetDepositResult> response = client.getSuccessDepositByRefNo(ChainType.ETH.getIntVal(),
-				ChainId.Rinkeby, refNo);
+String refNo = "ROX6TM563AL4ZAB7HUKU7VT7IA2EZODWMBLI46CZJ7QDM2XOIPWA";
+Response<GetDepositResult> response = client.getSuccessDepositByRefNo(ChainType.ETH.getIntVal(),
+		ChainId.Rinkeby, refNo);
 
-		GetDepositResult result = response.getResult();
-		if (result != null && result.getTransactions().size() > 0) {
+GetDepositResult result = response.getResult();
+if (result != null && result.getTransactions().size() > 0) {
 
-			// only one success record
-			Assert.assertEquals(result.getTransactions().size(), 1);
+	// only one success record
+	Assert.assertEquals(result.getTransactions().size(), 1);
 
-			TransferTransaction deposit = result.getTransactions().get(0);
+	TransferTransaction deposit = result.getTransactions().get(0);
 
-			Assert.assertTrue(deposit.getTxStatus());
-			log.info("Tx Status {}", deposit.getTxStatus());
+	Assert.assertTrue(deposit.getTxStatus());
+	log.info("Tx Status {}", deposit.getTxStatus());
 
-			// either FastConfirmedSuccess or ConfirmSuccess
-			Assert.assertTrue(TransactionStatus.FastConfirmedSuccess.equals(deposit.getStatus())
-					|| TransactionStatus.ConfirmedSuccess.equals(deposit.getStatus()));
+	// either FastConfirmedSuccess or ConfirmSuccess
+	Assert.assertTrue(TransactionStatus.FastConfirmedSuccess.equals(deposit.getStatus())
+			|| TransactionStatus.ConfirmedSuccess.equals(deposit.getStatus()));
 
-			// the unique id of transaction
-			if (true/* this refNo not process before */) {
-				// process here
-			}
+	// the unique id of transaction
+	if (true/* this refNo not process before */) {
+		// process here
+	}
 
-		}
+}
 ```
 
 
 ## Get deposit transaction by hash.
 
 ```
-    	Response<GetDepositByHashResult> response = 
-    			client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111", 0, 100);
+Response<GetDepositByHashResult> response = 
+		client.getApi().getDepositByHash(ChainType.ETH.getIntVal(), ChainId.Rinkeby, "0x11111", 0, 100);
 
-    	GetDepositByHashResult result = response.getResult();
-    	if(result != null) {
-    		
-    		// filter confirmed success transaction
-    		List<TransferTransaction> successDepositList = result.getTransactions().stream().filter(
-    				tx -> {
-    					return Boolean.TRUE.equals(tx.getTxStatus()) && // only success transactions
-    							"80000001".equals(tx.getWalletName()) &&  // specify wallet name(client id)
-    							tx.getStatus().equals(TransactionStatus.ConfirmedSuccess); // in ConfirmedSucceess status.
-    				}).toList();
-    		
-    		// process success deposit records
-    		for(TransferTransaction deposit : successDepositList) {
-    			// the unique id of transaction
-    			String refNo = deposit.getRefNo();
-    			if(true/* this refNo not process before*/) {
-    				// process here
-    			}
-    		}
-    	}
+GetDepositByHashResult result = response.getResult();
+if(result != null) {
+	
+	// filter confirmed success transaction
+	List<TransferTransaction> successDepositList = result.getTransactions().stream().filter(
+			tx -> {
+				return Boolean.TRUE.equals(tx.getTxStatus()) && // only success transactions
+						"80000001".equals(tx.getWalletName()) &&  // specify wallet name(client id)
+						tx.getStatus().equals(TransactionStatus.ConfirmedSuccess); // in ConfirmedSucceess status.
+			}).toList();
+	
+	// process success deposit records
+	for(TransferTransaction deposit : successDepositList) {
+		// the unique id of transaction
+		String refNo = deposit.getRefNo();
+		if(true/* this refNo not process before*/) {
+			// process here
+		}
+	}
+}
 ```
 
 
