@@ -1,28 +1,28 @@
 
 # API documents
 
-## API Format
-Request and response formats of API.
+## Message Format
+Request and response message formats of API.
 
-[WM-API Format.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-API%20Format.pdf)
+[Message Format](https://olympay.gitbook.io/wallet-manager/apis/message-format)
 
 ## Merchant APIs
 The APIs implemented at merchant side used to be called back by Wallet Manager.
 
-[WM-Merchant APIs.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Merchant%20APIs.pdf)
+[Merchant APIs](https://olympay.gitbook.io/wallet-manager/apis/merchant-apis)
 
 ## Wallet manager APIs
 The APIs private by Wallet Manager.
 
-[WM-Wallet Manager APIs.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Wallet%20Manager%20APIs.pdf)
+[Wallet Manager APIs](https://olympay.gitbook.io/wallet-manager/apis/wallet-manager-apis)
 
 ## Appendix (Enum and constants)
 
-[WM-Appendix.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Appendix.pdf)
+[Wallet Manager Enums](https://olympay.gitbook.io/wallet-manager/apis/enums)
 
 ## Support chain list
 
-[WM-Chain List.pdf](https://github.com/wallet-manager/wallet-manager-client-java/blob/main/docs/WM-Chain%20List.pdf)
+[Supported Chains & Tokens](https://olympay.gitbook.io/wallet-manager/apis/supported-chains)
 
 
 # Utilities and Client
