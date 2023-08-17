@@ -6,6 +6,7 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import dev.m18.walletmanager.client.enums.Direction;
+import dev.m18.walletmanager.client.enums.RiskLevel;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import dev.m18.walletmanager.client.enums.TransactionType;
 import lombok.Data;
@@ -94,5 +95,8 @@ public class TransferTransaction {
 	BigInteger postBalance;
 	
 	Integer decimals; 
+	
+	@JsonProperty("risk_level")
+	RiskLevel riskLevel;
 
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import dev.m18.walletmanager.client.enums.RiskLevel;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -91,6 +92,9 @@ public class DepositStatusCallback implements Callback{
 		
 		@JsonProperty("wallet_tag")
 		String walletTag;
+		
+		@JsonProperty("risk_level")
+		RiskLevel riskLevel;
 	}
 	
 }

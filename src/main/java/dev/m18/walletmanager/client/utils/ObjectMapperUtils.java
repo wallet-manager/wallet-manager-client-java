@@ -26,6 +26,7 @@ import dev.m18.walletmanager.client.enums.OperationBatchStatus;
 import dev.m18.walletmanager.client.enums.OperationStatus;
 import dev.m18.walletmanager.client.enums.OperationTransactionStatus;
 import dev.m18.walletmanager.client.enums.OperationType;
+import dev.m18.walletmanager.client.enums.RiskLevel;
 import dev.m18.walletmanager.client.enums.TransactionStatus;
 import dev.m18.walletmanager.client.enums.TransactionType;
 import dev.m18.walletmanager.client.enums.WalletType;
@@ -231,6 +232,16 @@ public class ObjectMapperUtils {
 				public WalletType deserialize(JsonParser p, DeserializationContext ctxt)
 						throws IOException, JsonProcessingException {
 					return WalletType.getByValue(p.getValueAsInt());
+				}
+			});
+			
+			// RiskLevel
+			module.addDeserializer(RiskLevel.class, new JsonDeserializer<RiskLevel>() {
+
+				@Override
+				public RiskLevel deserialize(JsonParser p, DeserializationContext ctxt)
+						throws IOException, JsonProcessingException {
+					return RiskLevel.getByValue(p.getValueAsInt());
 				}
 			});
 			

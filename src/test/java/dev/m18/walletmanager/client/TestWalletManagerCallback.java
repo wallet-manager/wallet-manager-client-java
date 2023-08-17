@@ -44,10 +44,13 @@ public class TestWalletManagerCallback {
     			+ "		\"block_number\": \"11297681\",\n"
     			+ "		\"block_hash\": \"0x4b14c1d0f8009010e6e1e2866bec278defba8f3e82dc94a359814be7775ff476\",\n"
     			+ "		\"block_time\": 1661932721,\n"
-    			+ "		\"tx_hash\": \"0xe8539c054bca34de343b8f15b7fe2736a76b7e66a4c476be96204c0a3a645138\"\n"
+    			+ "		\"tx_hash\": \"0xe8539c054bca34de343b8f15b7fe2736a76b7e66a4c476be96204c0a3a645138\",\n"
+    			+ "		\"risk_level\": 0\n"
     			+ "	}\n"
     			+ "}";
     	
+    	
+    	log.info(json);
     	MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(json);
     	
     	Assert.assertTrue("is deposit status callback", callback.isDepositStatusCallback());    	
@@ -159,6 +162,7 @@ public class TestWalletManagerCallback {
     			+ "}";
 
 
+    	log.info(json);
     	
     	MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(json);
     	
@@ -183,7 +187,7 @@ public class TestWalletManagerCallback {
     			+ "   }\n"
     			+ "}";
 
-
+    	log.info(json);
     	
     	MerchantCallback callback = WalletManagerUtils.parseMerchantCallback(json);
     	
